@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            border: 1px solid rgb(223, 208, 208);
+            padding: 10px;
+            width: 500px;            
+            margin: 0 auto;        
+        }
+        button{
+            border: 0 solid black;
+            border:0.5px solid rgb(234, 223, 223);
+            width: 400px;
+            height: 40px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        
+        img{
+            /* img태그는  inline-block태그  -> 필요에 의해서  block태그로 바꿈*/
+            display: block;   /*   display: block ,  display: inline  , display: inline-block ,  display: none,    */
+            width: 80%;
+            height: 60%;          
+            margin: 0 auto;   /*  block 태그에 한에서 margin:0 auto  적용됨*/                
+        }
+
+        .goods_info{
+            width:400px;
+            border:0.5px solid rgb(234, 223, 223);
+            padding: 10px;
+            margin: 0 auto;   
+        }
+        .order_info{
+            width:400px;
+            border:0.5px solid rgb(234, 223, 223);
+            padding: 10px;
+            margin: 0 auto;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+        .item{
+            margin-top: 10px;
+        }
+        .order_info input {
+            width:97%;
+            height: 30px;
+        }
+        .order_info select {
+            width:100%;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <!--주문정보-->
+        <div class="wrap">
+        <!--상품정보-->
+            <div class="goods_info">
+                <img src="goods.jpg">
+                <div><h2>감자</h2></div><hr>
+                <div>유기농 감자입니다.</div><br>
+                <div>가격 : 1만원/1KG</div><br>
+            </div>          
+        <!--주문내역정보-->
+            <div class="order_info">
+                <h3>--주문내역--</h3>
+                <div class="item">
+                    주문자이름 
+                    <input type="text">
+                </div>
+                <div class="item">
+                    주문량 
+                    <select>
+                        <option value="">무게를 선택하세요</option>
+                        <option value="">1kg</option>
+                        <option value="">2kg</option>
+                        <option value="">3kg</option>
+                    </select>
+                </div>
+                <div class="item"> 주문금액 <input type="text"></div>
+                <div class="item"> 전화번호  <input type="text"></div>
+                <br>
+                <div>
+                    <button>주문하기</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

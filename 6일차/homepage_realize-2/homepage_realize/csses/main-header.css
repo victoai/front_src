@@ -1,0 +1,61 @@
+.header,
+.header-title,
+.header-title__main,
+.header-title__main span {
+    /* border: 1px solid black; */
+    padding: 10px;
+}
+.header{
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.header-title h1 {
+    margin: 0px;
+}
+.header,
+.header-title__main  {
+    position: relative;
+}
+.header-title__main {
+    height: 80px;
+}
+
+.header-title__main span:first-child,
+.header-title__main span:last-child,
+.header-title__subtext,
+.header-login__a ul {
+    position: absolute;
+}
+
+.header-title__main span:first-child{ 
+    top: 8px;
+    font-size: 30px;
+    font-weight: normal;
+}
+.header-title__main span:last-child{
+    bottom: 18px;
+    left: 70px;
+
+    font-size: 42px;
+}
+.header-title__subtext {
+    bottom: 25px;
+    left: 40px;
+    font-size: 13px;
+    color: darkgray;
+}
+.header-title__subtext span {
+    margin: 0 30px;
+}
+.header-login__a ul {
+    list-style: none;
+    margin: 0px;
+    padding: 10px;
+    right: 20px;
+    bottom: 15px;
+}
+.header-login__a a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}

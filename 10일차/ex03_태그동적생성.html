@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function create(){
+               // alert("dkdkdkf");
+               let div1 = document.createElement("div");
+               div1.style.backgroundColor="red";
+               div1.innerHTML="새로생성된 div";               
+
+               // 새로생성된 요소를 추가하는 방법
+               // 부모찾기 
+               let b = document.getElementById("b");  
+               //alert(b);
+               b.appendChild( div1);
+        }
+    </script>
+</head>
+<body  id="b">
+    <button onclick="create()"> div 생성</button>
+</body>
+</html>

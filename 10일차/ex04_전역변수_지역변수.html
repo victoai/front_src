@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        let cnt =0;  // 전역변수, 함수밖에서 선언 
+        let cnta=0;   // a버튼 클릭 횟수
+        let cntb=0;   // b버튼 클릭 횟수
+
+        function a(){  
+            //지역변수  {}블러의범위안에서만 사용함                          
+            cnt++;
+            cnta++;
+            alert(cnt);
+            if( cnt <5){
+                alert("카운트진행" + cnt) ;
+            }else{
+                alert("총:" +cnt);
+                let c=10;                 //블럭범위안에서 선언한 변수는 그 블럭범위안에서만 사용 가능
+            }
+
+            alert(c);  // 에러가 발생됨
+
+        }
+
+        function b(){
+            cnt++;
+            cntb++;
+            alert( cnt);
+        }
+    </script>
+</head>
+<body>    
+
+<button  onclick="a()"> a</button>
+<button  onclick="b()"> b</button>
+
+</body>
+</html>

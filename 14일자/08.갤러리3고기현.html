@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .gallery{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: aquamarine;
+            position: relative;
+
+        }
+
+        .left_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            left: 10px;
+            top: 130px;
+            background-image: url("./media/media/Desert.png");
+            background-Position:"center";
+            background-Size:"cover";
+        }
+
+        .right_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: absolute;     /* top , right , left , bottom => position 변경해야 함*/
+            right: 10px;
+            top: 130px;
+            background-color: rgb(124, 46, 46);
+
+        }
+
+    </style>
+
+    <script>
+
+let imgNames=[
+             "media/media/Penguins.png", 
+             "media/media/Lighthouse.png",
+             "media/media/Chrysanthemum.png",
+             "media/media/Desert.png",
+             "media/media/Hydrangeas.png",
+             "media/media/Jellyfish.png",
+             "media/media/Koala.png",
+             "media/media/Tulips.png"
+         ];
+         
+         let next=2;
+         function changeImg_1(){
+            let gallery = document.getElementById("b");
+            let A = document.createElement("button");
+            b.appendChild(A);
+            gallery.style.backgroundImage ="url('"+ imgNames[next-1] +"')"; 
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";
+            next++;
+            next = next %imgNames.length; 
+        } 
+        function changeImg_2(){
+            let gallery = document.getElementById("b");
+            let A = document.createElement("button");
+            b.appendChild(A);
+            gallery.style.backgroundImage ="url('"+ imgNames[next] +"')"; 
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";
+            next++;
+            next = next %imgNames.length; 
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <div class="gallery" id="b">
+        <div class="left_btn" onclick="changeImg_1()">p</div>
+        <div class="right_btn" onclick="changeImg_2()">n</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        let arr= [ 5,3,1,9];
+        arr.sort();  //   정렬의 기준을 제공합니다. ( 기본이 문자열로 정렬)
+
+        //  "5"  "3"  "1"  "13"    => 문자열비교 
+        //  "apple"  ,"banana"
+
+
+        // 출력 
+        for( let i=0; i< arr.length ; i++){
+            alert( arr[i]); 
+        }
+
+        //
+        arr.forEach();  // 기능 , 함수, 매서드(방법)  , 하고싶은 일(절차) => 함수로 만들어서 제공
+
+        arr.forEach( p);
+
+        function p( index ){
+            alert( index);
+        }
+
+        
+        arr.forEach( function( index){
+              alert(index);
+        } );
+
+ 
+
+    </script>
+    
+</body>
+</html>

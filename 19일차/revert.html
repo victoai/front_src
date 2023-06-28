@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h3 {
+            font-weight: normal;
+            color: blue;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+
+<h3>  font-weight: normal,   color: blue</h3>
+<h3 style="font-weight: unset; color: unset;">This will still have font-weight: normal, but color: black</h3>
+<p>Just some text</p>
+<h3 style="font-weight: revert; color: revert;">This should have its original font-weight (bold) and color: black</h3>
+<p>Just some text</p>
+
+<h3>버튼으로 revert, unset 알아보기</h3>
+<fieldset>
+    <legend> revert, unset </legend>
+    <button>버튼1</button>
+    <button style="all:revert">revert:원래기본스타일로 돌아감</button>
+    <button style="all:unset">unset:스타일을 아예없애버림</button>  
+</fieldset>  
+</body>
+</html>

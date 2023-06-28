@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2>함수</h2>
+
+    <p>
+
+    </p>
+
+    <script>
+        // 중복  => 문제가 생김  , 변경이 어려워짐 , 실수유발
+        // 코드의 묶음 , 이름을 부여 , 함수정의, 함수호출
+
+        //3단출력
+        for(let i=1; i<=9; i++){
+            console.log( "3*" + i + "=" +  3*i);
+        }
+
+        //
+
+        for(let i=1; i<=9; i++){
+            console.log( "3*" + i + "=" +  3*i);
+        }
+
+        ///
+        for(let i=1; i<=9; i++){
+            console.log( "3*" + i + "=" +  3*i);
+        }
+
+        /*   기능: 3단을 출력하는 기능 
+        function  함수이름() {
+            명령문
+        } 
+        */
+
+        console.log("=======================================");
+        //함수정의
+        function dan3(){
+            for(let i=1; i<=9; i++){
+                console.log( "3*" + i + ":" +  3*i);
+            }
+        }
+
+        //함수호출 call해야만 실행됨 그리고 반드시 돌아온다.
+        dan3();
+        
+
+        dan3();
+
+
+        dan3();
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            border:20px ridge wheat;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        let imgNames= ["media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png"
+        ] ;
+
+        let next=1;   // 이미지배열의 index를 의미 (1 => 두번째 부터 )  
+        
+        
+        function change(obj){
+            setTimeout( changeImg, 500, obj);
+
+        }
+        function changeImg( obj){
+            obj.src =imgNames[next];
+            next++;
+            //next %= imgNames.length;   //   8 % 8  => 0     9%8 =>1    (0~7)
+            next =  next % imgNames.length;
+        }
+        // 4(이미지전체갯수)
+        // 1 2 3 4 5 6 7 8 9 10
+        // 1 2 3 0 1 2 3 0 1 2
+
+    </script>
+</head>
+<body>    
+    <img src="./media/Penguins.png" alt="이미지갤러리"  onclick="change(this)" >
+    <!--<button onclick="changeImg()">클릭</button> -->
+
+
+
+</body>
+</html>

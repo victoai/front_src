@@ -1,0 +1,43 @@
+@import "csses/main-header.css";
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-ber   li {
+    border: 1px solid black; 
+    
+    list-style: none;
+    /* margin: 10px; */
+    padding: 10px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.5); */
+}
+.nav-ber__ul {
+
+    width:1400px;
+    display: flex;
+
+    justify-content: center;
+    margin: 0 auto;
+}
+.nav-ber__menulist {
+    /* width: 200px; */
+    text-align: center;
+
+}
+.nav-ber__menulist span {
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin: 10px auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.nav-ber__menulist ul{
+    display: none;
+}
+
+
+.nav-ber__menulist:hover ul {
+    display: block;
+    width: 100px;
+}

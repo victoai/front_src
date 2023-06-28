@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //조재연님 
+
+        //매개변수가 있는 함수
+    function radious(x) {
+        for (let i=1; i<=x; i++) {
+            area= i*i*3.14;
+            document.write (area+"<br>");
+        }
+    }
+
+    radious(3);
+
+    //매개변수와 반환값이 있는 함수
+    function absmin(x, y) {
+        if (x>=y) {
+            min=x-y;
+        }
+        else {
+            min=y-x;
+        }
+        return min;
+    }
+
+     result=absmin(3,5);
+     document.write (result);
+
+
+    //홍윤성
+      
+    function f1(){
+        alert("안녕하세요");
+    }
+
+    function f2(name){
+        alert(name + "입니다.");
+    }
+
+    function f3(sister, brother){
+        alert(sister + "명의 여형제와 " + brother + "명의 남형제가 있습니다." );
+    }
+
+    function f4(year){
+        age = 2022- year;
+        //alert(year + "년도에 태어났고 " + age + "살 입니다.");
+        return  year + "년도에 태어났고 " + age + "살 입니다.";
+    }
+
+
+   let r1 =   f4(2000);
+   alert( "반환값=" + r1);
+
+    ///
+ 
+       //김준서님 
+        function ndan(su1){
+            for(let i=1; i<10; i++){
+                console.log(su1+"*"+i+"="+su1*i);
+            }
+
+        }
+
+
+        //let ndans=ndan(5);  , 반환값이 있을 때 사용가능한 코드 
+        //alert( ndans);
+
+        ndan(5);
+        
+
+
+
+        /*
+          기능: 나눗셈  결과를 반환하는 함수작성 
+          작성자: 임지수
+          입력정보 : 숫자 2개
+          반환값   : 나눗셈 결과 
+
+        */
+        function division(su1, su2){
+            let total;
+            total = su1/su2;
+            return total;
+        }
+
+        alert("dkdkdkdk=" + division(7,3));  //이렇게 사용해도 됨
+        let divisions = division(7,3);  // 반환값이 있으므로 가능한 코드 
+        alert("duv=" +divisions);  
+
+    
+        //임지수 
+        // 매개변수가 있는 것
+        function hola( name){
+            alert( name + " " + "hola!");
+        }
+
+        hola("임지수");
+
+        // 매개변수와 변환값이 있는 함수
+        function adder(a, b){
+            let sum;
+            sum = a + b;
+            return sum;
+        }
+
+        let  sum = adder(10,11);
+        alert(sum);
+
+
+
+        //소영님
+        function food(menu){
+           document.write("오늘의 메뉴"+menu);
+        }
+        food("카레");
+
+        function sum(a,b){
+            let total;
+            total= a+b ;        
+            return total;
+        }
+
+
+        alert(sum(1,2));
+
+
+
+        //고기현
+        function adder(su1, su2){
+            let total;
+            total=su1+su2;
+            let str="";
+            for(let i=1; i<=total; i++){
+            str+="*";
+            }
+            return str;    
+        }
+        let r2 = adder(2,6);
+        alert("r2반환값="+ r2);
+
+
+
+    //함수의 반환값을 활용한 예제
+        let i=1;
+        while(true){
+                i++;
+                document.write(r2 +"<br>");
+                if(i>8) break;
+        }
+        
+
+        //초희님
+        
+     
+        function rate(star){
+            for(let i = 0; i<star; i++){
+                document.write("★");
+            }
+            for(let j = 0; j<(5-star); j++){
+                document.write("☆");
+            }
+        }            
+        rate(3)
+
+        
+        
+    </script>
+</body>
+</html>

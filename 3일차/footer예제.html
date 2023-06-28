@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  
+
+    <style>
+
+        
+        *{
+           
+            font-family: 'Noto Sans KR', sans-serif;
+           
+        }
+
+        .wrap{
+            width: 90%;
+            margin: 0 auto;
+            background-color: antiquewhite;
+        }
+        .footer{
+            padding: 10px;
+            background-color: antiquewhite;
+            display: flex;
+            font-size: 14px;
+            
+        }
+        .footer .footer_item1{
+            width:10%; 
+            position: relative;
+        }
+
+        .footer .footer_item1 img{
+
+            position: absolute;
+            top:50px;
+            left:50px;
+        }
+        .footer .footer_item2{
+            width:45%;
+            padding-top: 20px;
+            margin-left: 20px;
+            
+        }
+
+        .footer .footer_item2 p{
+           margin-top: 30px;
+        }
+
+        .footer img{
+            width: 80px;
+            height: 60px;
+        }
+
+        .footer .footer_item2  a{
+            display: block;
+            margin-top: 50px;
+            text-decoration: none;
+            color:black;
+        }
+
+    </style>
+</head>
+<body>
+    
+<div  class="wrap">
+    
+    <div class="footer">
+        <div class="footer_item1">
+            <img src="data:image/png;base64,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"  alt>
+        </div>
+        <div class="footer_item2"> 
+            (주)지에스리테일 대표이사 허연수, 김호성 / 주소: 서울특별시 강남구 논현로 508 (역삼동, GS타워)<br>
+            사업자등록번호 : 116-81-18745 / 통신판매업신고 : 제2014-서울강남-01544호 사업자정보확인<br>
+            개인정보 보호책임자 : 이종혁 / 호스팅제공자 : ㈜지에스리테일<br>
+            고객센터(유료) : 1899-4455 / 02-2007-4545 / 팩스 : 02-393-6093 / 이메일문의 : gsshop@gsretail.com<br>
+          
+            <p>Copyright © GS Retail Co.,Ltd. All Rights Reserved</p>
+        </div>
+        <div class="footer_item2">
+            기업은행 채무지급보증안내
+            전자상거래등에서의 소비자보호에 관한 법률에 따라 <br> 기업은행과 채무지급보증 계약을 체결하여 고객님의 <br>
+            결제금액에 대해 안전거래를 보장하고 있습니다.
+            
+            <a href="#">사실가입신청확인</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

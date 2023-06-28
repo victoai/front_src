@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header{
+            height: 100px;
+            background-color: antiquewhite;
+            
+            position: relative;
+        }
+        header .inner{
+         
+            width: 1000px;
+            margin: auto;
+            margin-top: 30px;
+            
+            
+        }
+        header .inner ul{
+            display: flex;
+            list-style: none;
+        }
+        header .inner ul li{
+            flex-grow: 1;
+            position: relative;
+        }
+        header .inner ul li::before{
+            content: "";
+            width: 1px;
+            height: 12px;
+            display: block;
+            background-color: black;
+            position:absolute;
+            top:0px;
+            bottom:0px;
+            margin: auto;
+            
+        }
+        header .inner ul li a{
+            padding: 11px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+       <div class="inner">
+        <ul>
+            <li><a href="#">sign in</a></li>
+            <li><a href="#">sign in</a></li>
+            <li><a href="#">sign in</a></li>
+            <li><a href="#">sign in</a></li>
+            <li><a href="#">sign in</a></li>
+        </ul>
+       </div>
+    </header>
+    
+</body>
+</html>

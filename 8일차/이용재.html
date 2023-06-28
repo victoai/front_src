@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        let name = "파워에이드";
+        let price = 2000;
+        let weight = 500;
+
+        let drink = {
+            name : "파워에이드",
+            price : 2000,
+            weight : 500
+
+        }
+
+        alert(drink.name);
+
+
+        let drinks = [
+            {
+                name : "파워에이드",
+                price : 2000,
+                weight : 500
+            },
+            {
+                name : "게토레이",
+                price : 3000,
+                weight : 400
+            },
+            {
+                name : "포카리스웨트",
+                price : 2500,
+                weight : 400
+            }
+        ];
+
+        console.log(drinks[0].name);
+        console.log(drinks[1].name);
+        console.log(drinks[2].name);
+
+        console.log("==============================");
+        
+
+        for(i=0; i<3; i++){
+            console.log(drinks[i].name);
+        }
+
+
+    </script>
+</body>
+</html>

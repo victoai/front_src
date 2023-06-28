@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    <script>
+
+    // 기능 :별5개 출력
+    function printStar5(){
+        for(let i=1; i<=5; i++ ){
+            document.write("*");
+        }
+    }
+
+    
+    // 기능 :별3개 출력
+    function printStar3(){
+        for(let i=1; i<=3; i++ ){
+            document.write("*");
+        }
+    }
+
+
+    // 기능 :별3개 출력
+    function printStar7(){
+        for(let i=1; i<=7; i++ ){
+            document.write("*");
+        }
+    }
+
+
+    
+    // 입력정보가 있는 함수   ,  (매개변수)
+    function printStar(size){     // 매개변수앞에 let사용안함 , 입력정보를 저장함 
+        for( let i=1; i<=size; i++){
+            document.write("*");
+        }
+    }
+
+    printStar(6);
+    document.write("<br>");
+    printStar(2);
+
+
+
+    function printHi( size){
+        alert( size);
+        for(let i=1;  i<=size; i++){
+            console.log( "hi");
+        }
+    }
+
+    // 입력과 반환값이 없는 함수
+    function bbb(){
+        alert("입력과 반환이 없는 함수 ");
+    }
+
+    // 입력만 있는 함수 
+    function hi2( name){
+        alert( name + "hi");
+    }
+
+
+    // 입력과 반환값이 있는 함수
+    function adder( su1, su2){
+        let total;
+        total  = su1 +su2;
+        return total;
+    }
+
+    function ccc( su1, su2){         
+        // return "아무거나 줌";
+        return 50;
+    }
+
+    hi2("홍길동");
+    let  rtn  = adder(3,5);
+    alert(rtn);
+    let  result = ccc(10,11);
+    alert(result);
+
+    </script>
+
+    </body>
+    </html>

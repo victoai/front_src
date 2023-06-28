@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .detail{
+              height: 0px;             
+              background-color: aquamarine;
+              transition: .4s;  /*  0px   -> 100px  변화할때  변화되는시간을 설정해줄 수 있음 */
+
+        }
+    </style>
+
+    <script>
+
+       
+        function detail(obj){
+           // alert( obj);
+            let detail =  obj.parentElement.firstElementChild.nextElementSibling;
+           // alert( detail);
+            detail.style.height="100px";
+            detail.innerHTML="ddddd";
+
+        }
+    </script>
+</head>
+<body>
+    
+<div class="list">
+    <button onclick="detail(this)">상세</button>
+    <div  class="detail">       
+    </div>
+</div>
+<div class="list">
+    <button onclick="detail(this)">상세</button>
+    <div  class="detail">        
+    </div>
+</div>
+
+<div class="list">
+    <button onclick="detail(this)">상세</button>
+    <div  class="detail">         
+    </div>
+</div>
+
+
+</body>
+</html>

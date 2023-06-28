@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ball{
+            display: inline-block;
+            width:50px;
+            height: 50px;
+            background-color: aqua;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            line-height: 50px;
+        }
+
+        .ball1{
+            background-color: rgb(0, 255, 98);
+        }
+
+        .ball2{
+            background-color: rgb(34, 0, 255);
+        }
+
+        .ball3{
+            background-color: rgb(148, 238, 84);
+        }
+
+        .ball4{
+            background-color: rgb(244, 121, 199);
+        }
+
+        .ball5{
+            background-color: rgb(108, 100, 213);
+        }
+        .ball6{
+            background-color: rgb(0, 208, 255);
+        }
+
+       
+
+    </style>
+    <script>
+        function createLotto(){              
+            let lotto_wrap = document.getElementById("lotto_wrap");           
+            lotto_wrap.innerHTML="";             
+             //1.로또번호 생성하기  8,12,37,44,3,7          
+             let lottoNumbers = getLottoNumbers();   // let lottoNumbers = [8,12,37,44,3,7];
+             console.log( lottoNumbers);    
+   
+              let ballStyles= ["ball1" ,"ball2" ,"ball3" , "ball4" , "ball5" , "ball6"];
+             //2.반복(공6개 만들기)
+           
+             for( let i=0;  i< lottoNumbers.length ;i++){
+                let ball  = document.createElement("div");
+                ball.classList.add("ball");
+                //추가!!
+                ball.classList.add(ballStyles[i] );
+                ball.innerHTML= lottoNumbers[i];
+                lotto_wrap.appendChild( ball);                
+             }             
+             
+        }
+       
+
+        function getLottoNumbers(){            
+            let origin = new Array(45).fill().map(  function(value, index){
+                    return index+1;
+            });
+            let newArr = [];          
+            while(  origin.length >0){  //반복조건              
+                let randomIndex =  Math.floor( Math.random() * origin.length) ;   //난수발생 
+                //  0~44 중에 하나 발생됨
+                //  0~43 중에 하나 발생됨
+                let removed  = origin.splice(randomIndex ,1);  // 원본배열에서 제거
+                let value = removed[0];  // 제거된 index번째의 요소값을 반환
+                newArr.push(value);                
+            }            
+            console.log( newArr);
+
+            // 앞에서 6개만 배열로 만듬 
+            let  result = new Array(6);
+            for( i=0; i<6 ; i++) {
+                result[i] = newArr[i];
+            }
+            return result; 
+        }       
+
+    </script>
+</head>
+<body>    
+    <button  onclick="createLotto()">로또생성</button>
+    <!-- 로또영역 -->
+    <div class="lotto_wrap"  id="lotto_wrap">
+
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .visual{
+            height: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+        .visual .item{
+            width:100px;
+            height: 50px;
+            border:1px solid black;            
+        }
+
+        .visual .item:nth-child(1){
+            background-color: red;
+            /*top, bottom, left, right   => position:static(기본값)에서는 적용 안됨, position을 변경 */
+            position: absolute;   /*  부모를 기준으로 offset 위치*/
+            bottom: 0px;
+            right: 0px;
+
+        }
+        .visual .item:nth-child(2){
+            background-color: green;
+            position: absolute;
+            left:100px;
+            top:10px;
+
+        }
+        .visual .item:nth-child(3){
+            background-color: blue;
+            position: absolute;
+            top:30px;
+            right: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- visual 영역내에서 각 item 영역을 원하는 위치에 배치함   left, right, top, bottom  -->
+    <!--
+        위의 속성 4가지는  기본position: static 에서는 사용 불가함
+        position을 변경하고 사용해야 함
+        position:absolute 지정할때는 반드시 부모영역에   position: relative;
+    -->
+    <div class="visual">
+        <div class="item">영역1</div>
+        <div class="item">영역2</div>
+        <div class="item">영역3</div>
+    </div>
+   
+    
+</body>
+</html>

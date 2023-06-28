@@ -1,0 +1,67 @@
+@import "csses/main-header.css";
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.nav-ber ul,  li {
+    border: 1px solid black;
+    list-style: none;  
+    padding:0px;
+    margin:0px;
+    
+    
+}
+.nav-ber__ul {
+    /* width:1400px; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.nav-ber__menulist {
+    text-align: center;
+    width: 154px;
+
+}
+.nav-ber__menulist span {
+    display: block;
+    width: 150px;
+    margin:0px auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+
+
+
+
+
+
+ul, li{
+
+}
+/* 상위메뉴 너비*/
+.nav-ber__menulist {   
+    width: 154px;
+    
+  
+} 
+
+/* 하위메뉴  css*/
+/* 숨기기*/
+.nav-ber__menulist ul{
+    display: none;
+  }
+
+/* 보이기 */
+  .nav-ber__menulist:hover > ul {
+    display: block;
+    width: 154px;
+    position: fixed;
+    text-align: center;
+}
+
+:hover {
+    transition: none;
+}

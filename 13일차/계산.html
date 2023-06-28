@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>        
+        function calc(){            
+            let su1 = document.querySelector("#su1");
+            let su2 = document.querySelector("#su2");
+            let result =document.querySelector("#result");
+            result.value  =   parseInt(su1.value) + parseInt(su2.value);     
+       }
+    </script>
+</head>
+<body>    
+
+    <input type="text" id="su1">  +  <input type="text"  id="su2"> =  <input type="text" id="result">  
+    <button  onclick="calc()">계산</button>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+    <style>
+      .swiper{
+        width: 900px;
+        margin: 0 auto;
+      }    
+
+      .swiper-slide{
+        opacity: .2 ;
+      }
+
+      .swiper-slide-active{
+           opacity: 1;
+      }
+
+    </style>
+
+
+    <script>
+        window.addEventListener("load", function(){
+             //alert("load");
+             new Swiper(  '.swiper' , 
+                      {
+                        slidesPerView:3 ,   //슬라이드 개수
+                        spaceBetween :10 ,  // 슬라이드 사이의 여백
+                        centeredSlides:true,   // 가운데시작여부
+                        loop:true,            //반복
+                        autoplay: {            //2초 간격으로 자동재생
+                            delay: 2000
+                        },
+                        pagination: {                  //하단 페이지부분
+                            el: '.swiper-pagination' ,
+                            clickable: true           //클릭여부
+                        },
+                    // Navigation arrows
+                        navigation: {               // 이전 버튼, 다음버튼 
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        }     
+                    });
+
+        });  
+
+    </script>
+</head>
+
+
+<body >
+    
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"> <img src="images/promotion1.jpg"></div>
+          <div class="swiper-slide"> <img src="images/promotion2.jpg"></div>
+          <div class="swiper-slide"> <img src="images/promotion3.jpg"></div>          
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>            
+      </div>
+
+
+</body>
+</html>

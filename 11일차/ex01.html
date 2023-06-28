@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function info(){
+            alert("hi");
+        }
+        function info2(){
+            alert("hello");
+        }     
+        //문서로드가 완료 되었을 때 실행코드
+        function init(){
+            let btn=document.getElementById("btn");
+            //이벤트리스너 추가하는 함수 
+            //  이벤트이름, 오타주의 ,  해야할 일(핸들러 함수 )
+            //btn.addEventListener( "click" , info2 );
+            btn.addEventListener( "click" , function(){
+                alert("hello");
+            } );
+        }
+
+    </script>
+</head>
+<body  onload="init()">
+
+    <h3> 이벤트처리방법 </h3>
+    <button  onclick="info();">클릭 
+    </button>
+
+    //문서가 로드가 완료되는 시점에 발생하는 이벤트  load = > onload
+    <button  id="btn" >  클릭2  </button>  
+    
+</body>
+</html>

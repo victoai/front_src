@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //고차함수
+        function fun1(){
+            let str="";
+            for( let i=0; i<5; i ++){
+                str += i +"-";
+            }
+            return str;
+        }
+
+        function fun2(){
+            let str="";
+            for( let i=0;i<3; i++){
+                str+= i+",";
+            }            
+            return str;
+        }
+        console.log( fun1());
+        console.log( fun2());
+        function higherF( n, f ){     //반복횟수,실행할 코드를 함수를 받겠다
+            let str="";
+            for( let i=0;i< n;i++){
+                 str +=f(i);
+            }
+            return str;
+        }
+
+        let rtn1=  higherF( 5,  function( i){
+              return  i+"-"; 
+        } );
+      
+
+
+       let rtn2=  higherF( 3,  function( i){
+              return i+",";
+        } );
+
+        
+        let rtn3 = higherF(3 , test );
+        function test( i ){
+            return   i + ":";
+        }
+        
+        console.log( rtn1);
+        console.log( rtn2);
+        console.log( rtn3);
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=JetBrains+Mono:wght@100&family=Righteous&display=swap" rel="stylesheet">
+
+
+    <style>
+        body{
+            font-family: 'Black Han Sans', sans-serif;
+        }
+        .wrap{
+          /*  text-align: center;  이 부분 때문에 이 영역안에 있는 모든 내용, 텍스트 이미지가 가운데 갔어요!*/
+            padding: 20px;
+            border: 1px solid black;
+            margin: auto;
+            width: 820px;
+            
+            
+        }
+        header{
+            display: flex;
+            border: 1px solid black;
+        }
+        header .col1{
+            width: 50%;
+            text-align: center;
+        }
+        header .col2{
+            width: 50%;
+            text-align: center;
+            
+           
+        }
+        nav{
+            display: flex;
+            border: 1px solid black;
+            text-align: center;
+        
+            
+        }
+        nav >div{
+            width: 33%;
+            margin: auto;
+        }
+        nav >div input{
+            width: 100%;
+        }
+        section{
+            border: 1px solid black;
+            
+
+        }
+
+        footer{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <h1>REVIEW DETAIL</h1>
+        <header>
+            <div class="col1"> <h3>이미지</h3> <img src="#" alt=""></div>
+            <div class="col2"> <h3> 맛평가(후기) </h3> <textarea name="" id="" cols="30" rows="10"></textarea></div>
+        </header>
+
+        <nav>
+            <div><h3>연령대</h3> <input type="text"></div>
+            <div><h3>만족도</h3> <input type="text"></div>
+            <div><h3>성별</h3> <input type="text"></div>
+        </nav>
+
+        <section>
+            <h3>판매점 정보 (구매사이트)</h3>
+            <input type="text">
+        </section>
+
+        <footer>
+            <h3>더 나누고 싶은 정보</h3>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </footer>
+
+    </div>
+
+
+
+</body>
+</html>

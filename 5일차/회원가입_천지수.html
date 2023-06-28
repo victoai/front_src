@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 연습 :3시 5분</title>
+    <style>
+        table,td {
+            border: 1px solid black;
+            /*먼저 테이블에 선을주고 눈으로 테이블 확인하기 너비와 높이를 주지말고 작업하기*/
+            border-collapse: collapse;
+            /*왜 패딩 안먹히지?*/
+
+        }
+        table {
+
+           
+            margin: 100px auto;
+            /*표 중앙배치*/
+            padding: 50px;
+        }
+        td {
+            padding: 3px;
+            /*표에 살짝 패딩마진인데 표자체X 표칸에게!*/
+        }
+        td input{
+            height: 30px;
+            width: 25%;
+            /*모든 td태그 안에 들어가있는 input태그 모두 선택 높이를 설정하고*/
+        }
+        button {
+            height: 34px;
+            border: 0.5px solid rgba(0, 0, 0, 0.3);
+            background-color: beige;
+            /*모든 tb 태그 안에 들어가있는 button태그 모두 높이를 주고 기본스타일을 바꿈*/
+            width: 25%;
+            /*버튼의 너비를 줌.. 그리고 위에 border의 경계를 붕괴시키기!*/
+        }
+       
+
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>회원가입</caption>
+        <!-- 표의 h1같은 태그임 제목 태그 -->
+        <tr>
+            <td>이름</td>
+            <td>
+                <input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>아이디</td>
+            <td>
+                <input type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td>
+                <input type="text" />
+                <p>※비밀번호는 8자리 이상 영문숫자로 작성 해주세요</p>
+            </td>
+        </tr>
+        <tr>
+            <td>비밀번호확인</td>
+            <td>
+                <input type="text" />
+                <button>중복확인</button>
+            </td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td>
+                <input type="text" />@
+                <input type="text" />
+                <select>
+                    <option>선택하시오</option>
+                    <option>naver.com</option>
+                    <option>google.com</option>
+                </select>
+                <button>중복확인</button>
+            </td>
+        </tr>
+        <tr>
+            <td>학년/반</td>
+            <td>
+                <select>
+                    <option>선택하시오</option>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+                학년
+                <select>
+                    <option>선택하시오</option>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+                반
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="join-bntcomplete">
+                <button>가입</button>
+                <button>취소</button>
+            </td>
+            <!-- 
+                버튼 두개만들어가서 별도로 칸을 나눌필요 X 한칸이여도 충분함~! 
+                표 합치기! = 속성 >>colspan<<
+            -->
+
+        </tr>
+    </table>
+    
+</body>
+</html>

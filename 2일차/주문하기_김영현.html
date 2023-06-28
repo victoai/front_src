@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .wrap{
+            width:500px;
+            margin: 0 auto;
+            border-radius: 5px;
+            border:1px solid rgb(94, 93, 93);
+            padding:30px;
+        }
+        
+        .image_wrap{
+            width:300px;
+            height:400px;
+            margin: 0 auto;
+            
+            background-position: center;
+            background-size: cover;
+            background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjuPU9GlPNxd2MFLTCVEnOWeUTukuT1sOfcA&usqp=CAU);
+            
+        }
+
+        .order{
+            margin:0 auto;
+            width:100%;
+            bordr: 1px solid black;
+        }
+
+        div{
+            font-size: 10px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+    
+
+        button{
+            width:100%;
+            height:50px;
+            background-color: lightskyblue;
+            border-radius: 3px;
+            margin:0 auto;
+            margin-top: 10px;
+            border:1px solid lightskyblue;
+        }
+
+        input {
+            width:100%;
+            height: 30px;
+            margin:0 auto;
+        }
+
+        select{
+            width:102%;
+            height: 35px;
+            margin:0 auto;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+<div class="wrap">
+    <div class="image_wrap"></div>
+    <h1>대관령 황태</h1>
+    <div>겨울 내내 녹았다 얼렸다를 반복한 대관령 황태입니다.</div>
+    <div>가격: 30000원 / 10마리</div>
+    <div>---주문내역---</div>
+
+    <div class="order">
+        <div>
+                주문자이름<br>
+                <input type="text">
+        </div>
+        
+        <div>
+            수량<br>
+            <select>
+                <option>수량을 선택하세요</option>
+                <option>10마리</option>
+                <option>20마리</option>
+            </select>
+        </div>
+            
+        <div>
+            주문금액<br>
+            <input type="text">
+        </div>
+            
+        <div>
+            전화번호<br>
+            <input type="text">
+        </div>
+
+        <div>
+            <button>order</button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

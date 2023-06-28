@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+            background-image: url("./media/Penguins.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .left_btn{
+            width: 30px;
+            height: 30px;
+            background-color: rgb(253, 253, 253);
+            position: absolute;
+            border-radius: 50%;
+            left: 10px;
+            top: 130px;
+        }
+        .right_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            right: 10px;
+            top: 130px;
+        }
+
+    </style>
+    <script>
+        let imgNames = [
+            " media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png"
+    ];
+
+        let next =0;        
+        function change(){
+            let gallery = document.querySelector("#gallery");
+            gallery.backgroundImage= imgNames[next];
+            next++;
+            next = next %imgNames.length;   
+                    
+            gallery.style.backgroundImage ="url('"+ imgNames[next] +"')"; 
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";
+        }
+        function change2(){
+            let gallery = document.querySelector("#gallery");
+            next--;
+            if( next <0){
+                next =  imgNames.length-1;
+            }
+            gallery.backgroundImage= imgNames[next];
+            gallery.style.backgroundImage ="url('"+ imgNames[next] +"')"; 
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+
+    <div id="gallery" class="gallery">
+        <div onclick="change2()" class="left_btn">p</div>
+        <div onclick="change()" class="right_btn">n</div>
+        
+
+    </div>
+
+
+</body>
+</html>

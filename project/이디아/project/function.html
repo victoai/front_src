@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function test( su=9){  
+            alert(  su);
+        }
+
+        let json1={ id:"t" , pw:"2"};
+        test();
+        test(8);
+        test.apply(this);
+        test.apply(json1);
+        test.call(json1);
+        test.bind(json1);
+         
+
+    </script>
+    
+</body>
+</html>

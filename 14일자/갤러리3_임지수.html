@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #gallery{
+      border: 1px solid black;
+      margin: 0 auto;
+      background-image: url(media/Penguins.png);
+      width: 400px;
+      height: 400px;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      position: relative;
+    }
+    .leftBtn{
+      width: 100px;
+      height: 400px;
+      position: absolute;
+      left: 0px;
+      cursor: pointer;
+    }
+    .rightBtn{
+      width: 100px;
+      height: 400px;
+      position: absolute;
+      right: 0px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+
+    let imgNames=["media/Penguins.png", 
+                  "media/Lighthouse.png",
+                  "media/Chrysanthemum.png",
+                  "media/Desert.png",
+                  "media/Hydrangeas.png",
+                  "media/Jellyfish.png",
+                  "media/Koala.png",
+                  "media/Tulips.png"
+    ];
+    
+    let next = 0;
+    function right(){
+      next++;
+      next = next % imgNames.length;
+      let gallery = document.querySelector("#gallery");
+      gallery.backgroundImage = imgNames[next];
+
+      gallery.style.backgroundImage = "url('" + imgNames[next] +"')"; 
+    }
+    function left(){
+      next--;
+      let gallery = document.querySelector("#gallery");
+      gallery.backgroundImage = imgNames[next];
+
+
+        if( next <0){
+            next =  imgNames.length-1;
+        }
+
+      gallery.style.backgroundImage = "url('"+ imgNames[next] +"')"; 
+    }
+
+  </script>
+</head>
+<body>
+      <div id="gallery">
+        <div class="leftBtn" onclick="left()"></div>
+        <div class="rightBtn" onclick="right()"></div>
+      </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 1000px;
+            margin: 50px auto;
+        }
+        .wrap h3{
+            text-align: center;
+        }
+
+        .info{
+            margin:0 auto;
+            border: 1px solid gray;
+        }
+        .info select{
+            width:150px;
+            height: 35px;
+        }
+        .info span{
+            color: red;
+            font-size: 12px;
+        }
+        .info, .info td{
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+        .info td{
+            height: 40px;
+        }
+        .info td:nth-child(1){
+            text-align: center;
+            width: 120px;
+        }
+        .info td:nth-child(2){
+            width: 700px;
+        }
+        .wrap input{
+            height: 30px;
+            outline: 0px; 
+        }
+        .wrap button{
+            height: 33px;
+            width: 120px;
+        }
+
+        .wrap .btn{
+            text-align: center;
+            padding: 20px;
+
+        }
+    </style>
+    <script>
+        function check(){
+            let frm = document.frm;
+            let userName = frm.userName;
+            let userId  = frm.userId;
+            let userPw = frm.userPw;
+            let userPwC = frm.userPwC;
+            
+            if(userName.value==""){
+                alert("이름을 입력해주세요");
+                userName.focus();
+            }else if(userId.value==""){
+                alert("아이디를 입력해주세요");
+                userId.focus();
+            }else if(userPw.value==""){
+                alert("아이디를 입력해주세요");
+                userPw.focus();
+            }else if(userPwC.value==""){
+                alert("아이디를 입력해주세요");
+                userPwC.value.focus();
+            }else if(userPwC.value!=userPw.value){
+                alert("비밀번호가 일치하지 않습니다");
+                userPwC.value.focus();
+            }else{
+                frm.submit();
+            }
+        }
+        function setDomain(){
+            let frm = document.frm;
+            let domain = frm.domain;
+
+            let domainText = domain.options[domain.selectedIndex].text;
+            let domainValue = domain.options[domain.selectedIndex].value;
+
+            let emailDomain = frm.emailDomain;
+            emailDomain.value = domainText;
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <div >
+            <!-- 회원가입 제목영역 -->
+            <h3>회원가입</h3>
+        </div>
+        <div>
+            <!-- 회원항목 영역 -->
+            <form action="" name="frm" mehtod="post">
+            <table class="info">
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" name="userName"></td>
+                </tr>
+                <tr>
+                    <td>아이디</td>
+                    <td>
+                        <input type="text" name="userId">
+                        <button type="button" onclick="">중복학인</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td>
+                        <input type="password" name="userPw">
+                        <br>
+                        <span>
+                            ※비밀번호는 8자리이상 영문숫자로 작성해 주세요.
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>비밀번호 확인</td>
+                    <td><input type="password" name="userPwC"></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td>
+                        <input type="text" >
+                        @
+                        <input type="text" name="emailDomain">
+                        <select onchange="setDomain()" name="domain">
+                            <option value="">선택하세요</option>
+                            <option value="01">naver.com</option>
+                            <option value="02">google.com</option>
+                            <option value="03">hotmail.com</option>
+                        </select>
+                        <button type="button" onclick="">중복확인</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>학년/반</td>
+                    <td>
+                        <select name="" id="grade">
+                            <option value="">선택하세요</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                        학년
+                        <select name="" id="class">
+                            <option value="">선택하세요</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                        </select>
+                        반
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="btn">
+                            <!-- 버튼 영역-->
+                            <button type="button" onclick="check()">가입</button>
+                            <button onclick="">취소</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+        
+
+
+    </div>
+</body>
+</html>

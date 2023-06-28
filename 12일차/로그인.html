@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function check(){
+          //  alert("dddd");
+          // 유효성 체크 
+          // => 서버로 전송
+          
+           let frm = document.frm;
+           let userId  = frm.userId;
+           let userPw =  frm.userPw;
+           if(userId.value ==""){
+              alert("아이디 입력하세요");
+              userId.focus();
+           }else if(userPw.value==""){
+              alert("비밀번호 입력하세요");
+              userPw.focus();
+           }else{
+              alert("로그인...");
+              frm.submit();  // 
+           }
+        }
+    </script>
+</head>
+<body>
+    <!-- 로그인 -->
+   <div class="login-wrap">
+        <form  name="frm"  method="post">
+            아이디<input type="text" name="userId"> <br>
+            비번  <input type="password" name="userPw"> <br>
+            <button  type="button" onclick="check()">로그인</button>
+        </form>
+   </div>
+        
+</body>
+</html>

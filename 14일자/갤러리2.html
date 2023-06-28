@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+         let imgNames= ["media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png"
+        ] ;
+
+        let next=1;
+        function changeImg(){
+          let gallery=  document.querySelector("#gallery");  // 이미지태그
+          gallery.src=imgNames[next];
+          next++;
+          next = next % imgNames.length;
+        }
+
+        // 페이지가 로드가 완료되면 갤러리 변경
+        function init(){
+            setInterval( changeImg , 1000);        
+        /*  setInterval(() => {
+            alert("hi");
+          }, 3000);
+        */
+        }
+
+    </script>
+</head>
+<body onload="init()">    
+    <img src="./media/Penguins.png"  id="gallery">
+    <button onclick="changeImg()">클릭</button>
+</body>
+</html>

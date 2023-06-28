@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        //함수호출
+        func1();
+        func2();
+
+        function func1(){     // 정상적으로 출력 , 자바스크립트 엔진이 선언문형식의 함수는 끌어올림 (호이스팅)
+            alert(" func1 call");
+        }
+
+                            // 오류발생
+        let func2 = function  (){            
+            alert(" func2 call");   
+        };
+      
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

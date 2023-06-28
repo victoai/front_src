@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // dom  document  object  model  , dom 트리 구조
+        // 스타일변경
+       function change(){
+            //alert("call");
+            // 선택
+            let myspan  = document.getElementById("myspan");
+            //alert(myspan);
+            myspan.style.color="green";
+            myspan.style.fontSize="30px";
+            myspan.style.display="block";
+            myspan.style.width="300px";
+            myspan.style.height="50px";
+            myspan.style.border="3px dotted black";
+            myspan.style.margin= "20px";
+            // 스타일 변경
+            //내용변경
+            myspan.innerHTML=" <strong> 진짜 변경 되네요  </strong>!";
+       }
+    </script>
+</head>
+<body>
+    
+    <span  id="myspan">
+        내용
+    </span>
+    <button  onclick="change()">스타일변경</button>
+
+    
+    <h3>DOM </h3>
+    <p>
+        html문서의 각 요소(태그)를 객체화한 것
+        브라우저 -> 로드  -> 문서의 내용이 모두 메모리에 객체형태로 저장됨   <br>
+        브라우저 -> 자바스크립트에게 제공    document <br>       
+    </p>
+
+    <p>
+        - parentElement- 부모객체   <br>
+        - children  - 자식들        <br>
+        - firstElementChild - 첫째자식 <br>
+        - lastElementChild – 마지막자식  <br>
+        - previousElementSibling   <br>
+        - nextElementSibling     <br>        
+
+    </p>
+
+
+</body>
+</html>

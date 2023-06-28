@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+    <style>
+        div{
+            height: 2000px;
+        }
+    </style>
+
+    <script>
+       /* function throttle(callback, ms = 1000) {   //기본값 설정
+        let timer = null;
+        return function ( ) {
+            if (timer === null) {
+                timer = setTimeout(() => {
+                callback();// callback.apply(this );
+                timer = null;
+            }, ms);
+            }
+        };
+      }
+
+      */
+
+      /*
+        cdnjs 
+        https://cdnjs.com/libraries/lodash.js
+
+
+      */
+      
+    /*  window.addEventListener("scroll" , throttle( function(){
+             alert('hi');
+             console.log( window.scrollY);
+      }  ) );
+
+      */
+
+
+      window.addEventListener("scroll" , _.throttle(function (){       
+
+        if( window.scrollY > 1000){
+            console.log(  window.scrollY);
+          
+            // badages.style.display= 'none';
+              gsap.to( badages,  0.6, { opacity : 0 , display : 'none'});
+        }else{
+            //  badages.style.display= 'block';
+            gsap.to( badages,  0.6, { opacity : 1 , display : 'block'});
+        }
+
+    }) , 300); 
+    </script>
+
+<style>
+        
+
+    body{         
+        height: 3000px;
+    }
+
+    header{  
+       width: 100%;           
+       position: fixed;
+       top: 0px;
+       
+    }
+
+    header .badages{
+        position:absolute;
+        right:10px;
+        top:200px;
+        cursor: pointer;
+    }
+    header .badages .badage{          
+        border-radius:10px;
+        overflow: hidden;
+    }
+</style>
+</head>
+<body>
+    <header>
+        헤더
+
+       <div class="badages">
+           <div class="badage">
+               <img src="images/bages1.jpg" alt>
+           </div>
+           <div class="badage">
+               <img src="images/bages2.jpg" alt>
+           </div>
+       </div>
+   </header>
+</body>
+</html>

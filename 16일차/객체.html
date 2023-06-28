@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+         //함수        
+         let hello = function( obj){
+            alert("내이름" + obj.name) ;
+         }
+         // 
+         let cat2 = {
+            name :"뽀삐",
+            age:2
+         }
+
+         hello( cat2);     //함수 중심 코드  ,절차지향
+
+        //객체 , 속성, 기능(함수), 매서드 
+       // 객체 : 속성 + 기능 
+        let cat  ={
+            name:"야옹이",
+            age:3,
+            hello :  function(){      
+                return '내 이름'  + this.name;
+            }            
+        }
+         console.log( cat.name);
+         console.log( cat.hello());    // 객체지향  // hello( cat) 
+    </script>
+</body>
+</html>

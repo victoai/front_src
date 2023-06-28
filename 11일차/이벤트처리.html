@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //문서로 로드되었을 때 호출되는 함수         
+        function init(){
+            alert("load"); 
+            //하고 싶은 일
+            // 클릭 버튼에  실제  click이벤트리스너 추가 : 클릭되었을때 하고싶은 일을 등록하겠다
+
+            let btn =document.getElementById("btn");
+            //btn.addEventListener("click" ,  info);   // info() 쓰면안됨 주의 !!
+            //btn.addEventListener("click" ,  function(){});
+            btn.addEventListener("click" ,   function(){
+                alert("hello익명");
+            });
+        }
+
+        //핸들러함수 (이벤트를 처리하는 함수라고 해서 이벤트핸들러함수라고 부르기도 합니다.)
+        // 처리하는 애라고 생각하시면돼요
+        function info(){
+            alert("hello");
+        }
+    </script>
+</head>
+<body  onload="init()">    
+    <button id="btn">클릭</button>
+</body>
+</html>

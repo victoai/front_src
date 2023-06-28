@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+       
+     //함수
+    function printHi(){
+         alert("안녕");
+    }
+
+    //함수
+    function printMenu(){
+        alert("돈까스");
+    }
+
+    // 작성자 :
+    // 언제:
+    // 기능 : 
+    // 입력(나이), 반환값정보 true, false 
+
+    function isAdult( age){    // true, false
+        if( age > 19){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    // 작성자:
+    // 언제
+    // 기능 : 실행할 코드 정보를 3번 반복해주는 기능
+    // 입력, 반환값 : 실행해할 코드,함수      
+
+    // 함수만들기
+    function myforEach( f ){   // 입력정보로 함수를 받겠다는 의미 , 콜백함수
+        for( let i=0; i<3;i++){
+             f();  // 함수호출
+        }
+    }
+    // 함수실행
+    // 함수이름();  
+    myforEach( printHi );   // printHi   =>  callback(콜백함수)  ,callbackFn
+    myforEach( printMenu);   // 함수호출시 함수를 넘겨줌  이때 전달되는 함수, 콜백함수
+    myforEach( function(){
+        alert("자바스크립 수업중");
+    });
+         
+    </script>
+    
+</body>
+</html>

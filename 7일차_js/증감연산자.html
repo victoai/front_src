@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <h3>증감연산자 ++ --  ++a, a++ , --b, b--</h3>
+  <p>같은점 : 변수의 값을 1증가 시킴</p>
+  <p>다른점 : 연산의결과(반환값이 다름) , ++a : 증가후의 반환,   a++ :증가되기전의 값을 반환 </p>
+ 
+ <script>
+    let a=10;
+    let b=10;
+    let rtna;
+    let rtnb;
+
+    rtna=++a;   //  a=a+1  , a++
+    rtnb=b++;
+
+    alert("a=" + a);    // 11
+    alert("b=" + b);    // 11
+    alert( "rtna"  + rtna);   // 11
+    alert( "rtnb"   + rtnb);  // 10
+
+ </script>
+ <h4>연산자는 연산의 결과를 반환한다. !</h4>
+ <script>
+    let sum =3+5;
+    alert( sum); 
+ </script>
+
+</body>
+</html>

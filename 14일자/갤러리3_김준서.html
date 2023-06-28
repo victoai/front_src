@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            background-image: url(./media/Penguins.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .left_btn{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 130px;
+            left: 10px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+        }
+        .right_btn{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: gray;
+            position: absolute;
+            top: 130px;
+            right: 10px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <script>
+        let imgNames = [
+            "media/Penguins.png", 
+            "media/Lighthouse.png",
+            "media/Chrysanthemum.png",
+            "media/Desert.png",
+            "media/Hydrangeas.png",
+            "media/Jellyfish.png",
+            "media/Koala.png",
+            "media/Tulips.png"
+                        ]
+            
+            
+            
+            
+                        let next = 0;
+        function nextimgChange(){
+            
+            let gallery = document.querySelector(".gallery");
+            next++
+            next %= imgNames.length;
+            gallery.style.backgroundImage="url('"+ imgNames[next] +"')"; 
+            
+            
+        }
+            let pre = 7;
+        function previousimgChange(){
+            let gallery = document.querySelector(".gallery");
+            if(pre<=-1){
+                pre=7;
+            }
+            gallery.style.backgroundImage =`url('${imgNames[pre]}')`;
+            pre--
+        }
+    </script>
+</head>
+<body>
+    
+
+    <div class="gallery">
+        <div class="left_btn"onclick="previousimgChange()">p</div>
+        <div class="right_btn" onclick="nextimgChange()">n</div>
+
+
+    </div>
+</body>
+</html>

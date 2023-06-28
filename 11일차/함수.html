@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //1~10합  , call 호출시에만 실행됨
+
+
+        //1.함수선언문
+        function getTotalTen(){
+            let sum=0;
+            for(let i=1; i<=10 ; i++){
+                sum += i;
+            }
+           // console.log( sum);
+            return sum;
+        }
+        let rtn = getTotalTen();  // 함수호출
+        alert( rtn);
+
+
+        //2. 함수표현식
+                             // 익명함수        
+        let getTotalTen2  =  function (){
+            let sum=0;
+            for(let i=1; i<=10 ; i++){
+                sum += i;
+            }
+            console.log( sum);
+            return sum;
+        }
+
+        let rtn2 =getTotalTen2();
+        alert( rtn2);
+
+
+
+
+    </script>
+</body>
+</html>

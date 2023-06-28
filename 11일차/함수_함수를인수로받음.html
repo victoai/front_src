@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function callback1 (){
+            alert(" callback1 ");
+        }
+        let callback2 = function(){
+            alert(" callback2");
+        }
+        function func1( f){    // 함수를 인수로 받는 함수를 만든다
+            alert(" 1초 뒤에 실행해 줄께");
+            f();   //함수호출
+        }
+        callback1();
+        callback2();        //       
+        func1( callback1 );   // 함수호출시에 함수정보를 전달해줌 
+        func1( callback2 );        
+        
+        func1( function(){
+             alert("callback3");
+        });
+        // 일정시간후에 원하는코드를 실행해주는 라이브러리 : (남이 만든 함수, 기능)
+        setTimeout( callback1   , 1000);     
+        setTimeout(  function(){             // 함수정보자리에  직접익명으로 함수를 작성할 수 있음
+            alert("hi");
+        }, 3000);    
+        //화살표함수
+        setTimeout( () =>{
+            alert("hi");
+        } , 1000);
+
+    </script>
+    
+</body>
+</html>

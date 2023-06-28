@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .login{
+            display: none;
+        }
+    </style>
+
+    <script>
+        function show(){
+             let login = document.querySelector(".login");
+             alert( login);
+             alert( "dfdfdf=" + login.style.display);
+             login.style.display="block";
+             
+        }
+
+        function show2(){
+             let login2 = document.querySelector(".login");
+             alert( login2);
+             alert( "dfdfdf=" + login.style.display);
+
+             
+        }
+    </script>
+</head>
+<body>
+    <div class="login">dfdfdf</div>
+    <button  onclick="show()">test</button>
+    <button  onclick="show2()">test</button>
+</body>
+</html>

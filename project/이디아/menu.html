@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header{
+            height: 100px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        .main-menu{
+            padding: 0px;
+            margin: 0px;
+            background-color: aqua;
+            display: flex;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            list-style: none;
+            z-index: 1;
+
+        }
+        .main-menu .item{
+            padding: 10px 20px 34px 10px;
+             
+        }
+ 
+        .main-menu .item:hover{
+            background-color: coral;
+        }
+        .main-menu .item:hover .sub-menu{
+           display: block;
+           position: fixed;
+           left:0px;
+           top:100px;
+           width: 100%;          
+           list-style: none;
+           height: 300px;
+           background-color: rgb(39, 38, 38);
+           color:white;
+           display: flex;
+        }
+        .main-menu .item:hover .sub-menu li{
+            padding :20px ;
+        }
+        .sub-menu{
+            display: none;
+            
+        }
+
+        .banner{
+            width:100%;
+            height: 300px;
+            background-image: url(images/star.png);
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <header> 
+         <ul class="main-menu">
+            <li class="item">Coffee
+                <ul class="sub-menu">
+                    <li>
+                        
+                    </li>
+                     
+                </ul>
+            </li>
+            <li class="item">Coffee
+                <ul class="sub-menu">
+                    <li>coffee2</li>
+                    <li>coffee1</li>
+                    <li>coffee1</li>
+                    <li>coffee1</li>
+                </ul>
+            </li>
+            <li class="item">Coffee
+                <ul class="sub-menu">
+                    <li>coffee1</li>
+                    <li>coffee1</li>
+                    <li>coffee1</li>
+                    <li>coffee1</li>
+                </ul>
+            </li>
+            <li class="item">Coffee
+                <ul class="sub-menu">
+                    <li>coffee1</li>
+                    <li>coffee1</li>
+                    <li>coffee1</li>
+                    <li>coffee1</li>
+                </ul>
+            </li>
+         </ul>
+    </header>
+
+    <div class="banner"></div>
+</body>
+</html>

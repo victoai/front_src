@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+  /*네이게이션 영역 높이 50*/
+        nav{
+            height: 50px;
+            background-color: green;
+            position: relative;
+        }
+       
+        ul{
+            padding:0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .menu{           
+            display: flex;           
+            
+        }
+
+        .menu-item {            
+            width:150px; /*상위 메뉴에 너비주기*/           
+        }
+        .menu-item >ul{
+            display: none; /*하위메뉴 없애기*/
+        }
+
+
+        .menu-item:hover >ul{
+            display: block;
+            width:150px; /*하위랑 같은 너비를줌*/
+            height: 100px;
+           background-color: rgb(113, 70, 15);
+           color:white;
+          
+        }
+
+
+        .menu-item a{
+           line-height: 50px;
+        }
+
+        .visual{
+            background-color: red;
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+
+        <div class="a">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a>메뉴1</a>
+                    <!-- 하위 메뉴, 기본 안보임-->
+                    <ul>
+                        <li>하위1</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a>메뉴1</a>
+                    <!-- 하위메뉴-->
+                    <ul>
+                        <li>1</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a>메뉴1</a>
+                    <!-- 하위메뉴-->
+                    <ul>
+                        <li>1</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="visual"></div>
+</body>
+</html>

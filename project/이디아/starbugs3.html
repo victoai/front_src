@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        /* 글자폰트, 글자크기  */
+        body{            
+            line-height: 1.4em;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ccc;
+        }
+
+        img{
+            display: block;
+        }
+
+       
+        a{
+            text-decoration: none;
+            color:rgb(30, 29, 29);
+            
+        }
+
+        header{
+            
+            border-bottom: 1px solid #ccc;
+            background-color: rgb(250, 248, 245);
+           
+            
+        }
+
+        header .inner{
+            height: 200px;
+            width:1100px; 
+            margin: auto;
+            position: relative; 
+            
+        }
+
+        header .inner .logo{
+            height: 122px;
+            position:absolute;
+            display: block;
+            top:0px;
+            bottom: 0px;
+            margin: auto;
+          
+        }
+        header .inner .sub-menu ul.menu{
+
+            display: flex;
+            list-style: none;
+        }
+
+        header .inner .sub-menu ul.menu  li{
+          
+            position: relative;
+
+        }
+        header .inner .sub-menu ul.menu  li a{
+            padding: 10px 11px;
+            color:#ccc;
+
+        }
+
+        header .inner .sub-menu ul.menu  li a:hover{
+          color:#000;
+        }
+
+      
+
+        header .inner .sub-menu ul.menu  li::before{
+            content: "";
+            display: block;
+            width: 1px;
+            height: 12px;
+            background-color: rgb(195, 239, 137);
+            position:absolute;
+            top:0px;
+            bottom: 0px;
+            margin: auto;
+            
+            
+
+        }
+
+        header .inner .sub-menu ul.menu  li:first-child::before{
+            display: none;
+        }
+
+        header .inner .sub-menu  {
+            display: flex;
+            position:absolute;
+            right: 0px;
+            top:20px;
+            font-size: 12px;
+            
+        }
+        header .inner .sub-menu  .search{
+            height: 30px;
+            width:150px;
+            background-color: white;
+            position: relative;
+            border-radius: 5px;
+            margin-top: 10px;
+          
+
+        }
+        header .inner .sub-menu  .search input{
+            width:110px; 
+            height: 20px;
+            margin-top: 5px;
+            border:0px;
+            outline: none;
+            
+            
+        }
+        header .inner .sub-menu  .search img{
+            width:30px;
+            height: 20px;  
+            display: inline-block;          
+            position: absolute;
+            top:0px;
+            bottom: 0px;
+            margin: auto; 
+        }
+
+
+        /*  메인메뉴 자체가 가려지지 않도록  z-index 속성 */
+        header .inner ul.main-menu  {
+            list-style: none;
+            display: flex;
+            position:absolute;
+            bottom: 0px;
+            right: 0px;
+            margin-bottom: 0px;
+            z-index: 1;
+        
+      }
+      
+     /*  item 안의  item__name영역의 패딩주기, 영역확보하기 */
+    
+      header .inner ul.main-menu .item .item__name {
+        padding: 10px 20px 34px 20px;
+            
+        
+      }
+
+      /* 아이템에 마우스가 올려졌을 때 */
+
+      header .inner ul.main-menu .item:hover .item__name  {
+        background-color: #000;
+      }
+
+      header .inner ul.main-menu .item:hover .item__contents {
+        display: block;
+      }
+      header .inner ul.main-menu .item .item__contents {
+       
+        position: fixed;
+        left: 0px;
+        width:100%;
+        height: 300px;
+        display: none;
+        
+       
+      }
+       
+
+
+      .item__contents .contents-menu{
+        height: 90%;
+        background-color: #000;
+      }
+
+      .item__contents .contents-texture{
+        height: 10%;
+        background-color: rgb(222, 136, 136);
+      }
+
+      .adv{
+        background-image: url(images/star.png);
+        background-position: center;
+        background-size: cover;
+        width:100%;
+        height: 500px;
+      }
+
+    
+      
+    </style>
+</head>
+<body>
+    <header>
+       <div class="inner">
+         <!-- logo  -->
+         <a href="#"  class="logo">
+            <img src="images/star.png"  alt="logo">
+        </a>
+        <!-- sub menu  -->
+        <div class="sub-menu">
+            <ul class="menu">
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+
+            <div class="search">
+                <input type="text">
+                <img src="images/search.png" alt="search" >
+            </div>       
+        </div>       
+         <!-- main menu  -->
+       
+            <ul  class="main-menu">
+                <li  class="item"> 
+                    <div  class="item__name"> COFFEE </div>
+                    <div  class="item__contents"> 
+                        <div class="contents-menu">
+                           aaa
+                        </div>                      
+                    
+                        <div class="contents-texture">bbb</div>
+                    </div>
+                 </li>
+                 <li  class="item"> 
+                    <div  class="item__name"> COFFEE </div>
+                    <div  class="item__contents"> 
+                        <div class="contents-menu"></div>                      
+                    
+                        <div class="contents-texture"></div>
+                       
+                     </div>
+                 </li>
+                 <li  class="item"> 
+                    <div  class="item__name"> COFFEE </div>
+                    <div  class="item__contents"> 
+                        <div class="contents-menu"></div>                      
+                    
+                        <div class="contents-texture"></div>
+                     </div>
+                 </li>
+                 <li  class="item"> 
+                    <div  class="item__name"> COFFEE </div>
+                    <div  class="item__contents"> 
+                        <div class="contents-menu"></div>                      
+                    
+                        <div class="contents-texture"></div>
+                     </div>
+                 </li>
+                 
+            </ul> 
+           
+       </div>
+    </header>
+
+    <div class="adv">
+
+
+    </div>
+</body>
+</html>

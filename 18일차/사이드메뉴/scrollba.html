@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #login_wrap {
+            width:325px;
+            height:230px;
+            border:1px solid rgb(182, 182, 182);
+            position: absolute;
+            right: 80px;
+            bottom: 280px;
+            display: none;
+        }
+
+        #login_wrap2 {
+            width:325px;
+            height:130px;
+            border:1px solid rgb(182, 182, 182);
+            position: absolute;
+            right: 80px;
+            bottom: 380px;
+            display: none;
+        }
+
+        #search_wrap{
+            width:325px;
+            height: 60px;
+            border:1px solid rgb(182, 182, 182);
+            position: absolute;
+            right: 80px;
+            bottom: 365px;
+            background-color: white;
+            display: none;
+        }
+
+        #search_border {
+            width:240px;
+            height:40px;
+            border:0px;
+            outline:0px;
+            background-color: #EEEBEE;
+            padding:0px 0px 0px 20px;
+            margin: 10px 0px 0px 10px;
+        }
+        #search_btn {
+            width:40px;
+            height:40px;
+            background-image:url("../사이드메뉴/search_btnR.png");
+            background-size: cover;
+            background-position: cover;
+            background-color:#EEEBEE ;
+            margin: 10px 10px 10px 0px;
+        }
+
+        .border, .login_button {
+            height:40px;
+            margin:8px;
+        }
+        .border{
+            width:280px;
+            border:0px;
+            outline:0px;
+            background-color: #EEEBEE;
+            padding:0px 0px 0px 20px;
+        }
+
+        .login_button {
+            width:305px;
+            background-color: black;
+            color: #EEEBEE;
+        }
+
+        #logout_button, #mypage_button {
+            width:150px;
+            height: 50px;
+            border-radius: 5%;
+            margin: 3px;
+        }
+
+        #logout_button {
+            background-color: black;
+            color: #EEEBEE;
+            margin-left: 7px;
+        }
+
+        #mypage_button, #shopping_cart_btn {
+            border: none;
+            background-color:#EEEBEE ;
+        }
+        #shopping_cart {
+            width:325px;
+            height:230px;
+            border: 1px solid gray;
+            position: absolute;
+            right: 80px;
+            bottom: 280px;
+            display: none;
+        }
+
+        #shopping_cart_content {
+            width:325px;
+            height:100px;
+            font-size: small;
+            align-items: center;
+            text-align: center;
+            padding:50px 0px 0px 0px;
+            color:gray;
+            display: block;
+        }
+
+        #shopping_hr {width: 85%;}
+
+        #shopping_cart_btn {
+            display: block;
+            width: 280px;
+            height: 50px;
+            margin: auto;
+        }
+
+        #text {
+            text-align: center;
+        }
+        
+        .last {
+            font-size: smaller;
+            padding: 10px;
+        }
+        #right_menu{
+            width:30px;
+            position:fixed;
+            right: 40px;
+            bottom: 60px;
+        }
+
+        #shopper {
+            width: 30px;
+            height: 30px;
+            background-image:url("../사이드메뉴/shopper_btnR.png") ;
+            background-position: center;
+            text-align: center;
+            line-height: 40px;
+            background-repeat:no-repeat;
+        }
+        #blank{
+            height: 70px;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+            padding:10px;
+        }
+
+        #upper {
+            width: 30px;
+            height: 30px;
+            background-image:url("../사이드메뉴/upper_btnR.png") ;
+            background-position: center;
+            line-height: 45px;
+            background-repeat:no-repeat;
+        }
+
+        #lower{
+            width: 30px;
+            height: 30px;
+            background-image:url("../사이드메뉴/lower_btnR.png") ;
+            background-position: center;
+            line-height: 45px;
+            background-repeat:no-repeat;
+        }
+
+        #upper:hover {
+            width: 30px;
+            height: 30px;
+            background-image:url("../사이드메뉴/upper_hover.png") ;
+            background-position: center;
+            line-height: 45px;
+            background-repeat:no-repeat;
+        }
+
+        #lower:hover{
+            width: 30px;
+            height: 30px;
+            background-image:url("../사이드메뉴/lower_hover.png") ;
+            background-position: center;
+            line-height: 45px;
+            background-repeat:no-repeat;
+        }
+    </style>
+    <script>
+        function login() {
+            let logindiv=document.getElementById("login_wrap")
+            let logindiv2=document.getElementById("login_wrap2")
+            if (logindiv2.style.display =="block") {
+                logindiv.style.display = "none";
+                logindiv2.style.display = "none";}
+            else if (logindiv.style.display == "none") {
+            logindiv.style.display = "block";}
+            else {logindiv.style.display = "none";}
+        }
+        function login2(){
+            let logindiv=document.getElementById("login_wrap")
+            let logindiv2=document.getElementById("login_wrap2")
+            if (logindiv2.style.display == "none") {
+                logindiv.style.display ="none";
+                logindiv2.style.display = "block";}
+            else {logindiv2.style.display = "none";}
+        }
+        function search() {
+            let searchdiv=document.getElementById("search_wrap")
+            if (searchdiv.style.display == "none") {
+            searchdiv.style.display = "flex";}
+            else {searchdiv.style.display = "none";}
+        }
+        
+        function shopper() {
+            let shopperdiv=document.getElementById("shopping_cart")
+            if (shopperdiv.style.display == "none") {
+            shopperdiv.style.display = "block";}
+            else {shopperdiv.style.display = "none";} }
+    </script>
+</head>
+<body>
+<!--ID창-->
+<div id="login_wrap">
+    <div>
+        <input class="border" type="text" placeholder="ID">
+    </div>
+    <div>
+        <input class="border" type="password" placeholder="PW">
+    </div>
+    <div>
+        <button class="login_button">LOGIN</button>
+    </div>
+    <div id="text">
+        <a class="last">FIND ID</a> | <a class="last">FIND PW</a> | <a class="last">JOIN US</a>
+    </div>
+    <br><br>
+    <button class="login_button" onclick="login2()">로그인 시 화면 확인 버튼</button>
+</div>
+<!-- 로그인 시 창 -->
+<div id="login_wrap2">
+    <div style="text-align:center; margin-top:20px">고객님 반갑습니다 :)</div>
+    <br>
+    <button id="logout_button"> LOGOUT </button> <button id="mypage_button"> MYPAGE </button>
+</div>
+<!-- 장바구니 창 -->
+<div id="shopping_cart">
+<span id="shopping_cart_content"> 장바구니가 비어있습니다 </span> <hr id="shopping_hr"> <button id="shopping_cart_btn"> 장바구니 이동</button>
+</div>
+<!--검색창-->
+<div id="search_wrap">
+    <input id="search_border" type="text">
+    <div id="search_btn"></div>
+</div>
+
+<!--우측 사이드 메뉴-->
+<div id="right_menu">
+    <div id="right_upper">
+        <div>
+            <div id="member"><img src="../사이드메뉴/mem_btnR.png" onclick="login()"></div>
+        </div>
+        <div>
+            <div id="shopper" onclick="shopper()"><span>0</span></div>
+        </div>
+        <div>
+            <div id="search"><img src="../사이드메뉴/search_btnR.png" onclick="search()"></div>
+        </div>
+        <div id="blank"><!--사이 빈공간--></div>
+        <div id="right_lower">
+            <div>
+                <div><a href="#"><img src="../사이드메뉴/right_insta.png"></a></div>
+            </div>
+            <div>
+                <div><a href="#"><img src="../사이드메뉴/right_Ntalk.png"></a></div>
+            </div>
+            <div>
+                <div><a href="#"><img src="../사이드메뉴/right_ch.png"></a></div>
+            </div>
+            <div>
+                <div><div id="upper" onclick="javascript:window.scrollTo(0,0)"></div></a></div>
+            </div>
+            <div>
+                <div><div id="lower" onclick="javascript:window.scrollTo(0,document.body.scrollHeight)"></div></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+다 똑같으니까 확인이 안되는 지라 긴 글씨 한 번 넣어봤습니다<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+adf<br>
+
+</body>
+</html>

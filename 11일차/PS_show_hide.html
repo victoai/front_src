@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <script>
+
+        function change(){
+            let input = document.getElementById("input");
+            if(input.type == "text"){
+                input.type = "password"
+            }else{
+               input.type="text";
+            }
+        }
+    </script>
+</head>
+<body>    
+    <input id="input" type="password">
+    <button id="btn" onclick="change()">
+        패스워드 보여주기
+    </button>
+</body>
+</html>

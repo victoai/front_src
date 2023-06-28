@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+         
+         
+         /*  영역표시를 위해 border 값을 지정했습니다
+             마지막에  border 삭제하시고 보세요 ! 
+         */
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        header{
+            border:1px solid black;
+            height: 200px;
+        }
+        header .inner{
+            width: 1000px;
+            height: 200px;
+            display: flex;   /* inner의 이미지 영역과 메뉴 영역이 옆으로 나오게 설정*/
+            margin: 0 auto;
+            font-weight: 14px;
+            color:#ccc;
+            border:1px solid black;
+        }
+
+        header .logo{
+            width: 200px;
+            height: 200px;
+            border:1px solid black; 
+        }
+
+        header .menu{
+            width: 800px;   
+            position: relative;
+        }
+
+
+        /*메뉴영역내에서 실제 메뉴wrap 공간 위치지정  오른쪽끝, 바닥에 붙임
+          부모영역을 기준으로 원하는 위치에 지정함
+          position:absolute 지정
+          반드시 부모영역으로 사용할 영역에 position:relative 지정함
+          position: absolute;
+          right:0px;
+          bottom:0px;
+        */
+
+        header .menu .menu_wrap{
+            list-style: none;
+            position: absolute;
+            right:0px;
+            bottom: 0px;
+            display: flex;
+            border:1px solid black;
+        }
+
+
+       
+
+        /* 메뉴 이름영역*/
+        .first .menu_item{
+            padding: 10px  20px  34px 20px;
+        } 
+
+        /*상위메뉴 영역에 마우스 올려졌을때 이름영역의 배경색및 글자색 변경*/
+        .first:hover .menu_item{
+            background-color: black;
+            color: white;
+        } 
+
+
+        /* 상위메뉴 영역 안의  하위메뉴 영역숨기기  => 하위메뉴영역 기본은 안보임*/
+        .first .item_contents{
+            display: none;
+        }
+        /* 상위메뉴 영역에 마우스가 올려졌을때  숨김하위메뉴 영역 보이기*/
+        /* 전체화면 나올 수 있게  설정 */
+          
+        .first:hover .item_contents{        
+            display: block;
+            position: fixed;
+            left:0px;
+            width: 100%;
+            height: 300px;
+            background-color: black;
+            padding: 30px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+ 
+        <header>  
+            <div class="inner">
+                <div class="logo">로고이미지</div>                
+                <div class="menu">
+                    <!--메뉴-->
+                    <ul class="menu_wrap">
+                        <!--상위메뉴-->
+                        <li class="first">
+                            <!--이름영역-->
+                            <div class="menu_item">My Account</div>                        
+                            <!--숨김메뉴-->
+                            <div class="item_contents">
+                                    
+                            </div>
+                        </li>
+                        <li class="first">
+                            <!--이름영역-->
+                            <div class="menu_item">카드</div>
+
+                            <!--숨김메뉴-->
+                            <div class="item_contents">
+                                
+                                    <div class="contents_menu">3층 시스템</div>
+                                    <div class="contents_menu">카드 안내 및 신청</div>
+                                    <div class="contents_menu">기타 카드</div>
+                            </div>
+                        </li>
+                        
+                        <li class="first">
+                            <!--이름영역-->
+                            <div class="menu_item">혜택</div>
+
+                            <!--숨김메뉴-->
+                            <div class="item_contents">
+                                    <div class="contents_menu">나만의 혜택</div>
+                                    <div class="contents_menu">혜택 안내</div>
+                                    <div class="contents_menu">Premium 혜택</div>
+                                    <div class="contents_menu">정부지원 사업</div>
+                            </div>
+                        </li>
+                        
+                        <li class="first">
+                            <!--이름영역-->
+                            <div class="menu_item">금융</div>
+                            <!--숨김메뉴-->
+                            <div class="item_contents">
+                                    <div class="contents_menu">금융</div>
+                            </div>
+                        </li>
+                        
+                        <li class="first">
+                            <!--이름영역-->
+                            <div class="menu_item">컬처</div>
+
+                            <!--숨김메뉴-->
+                            <div class="item_contents"></div>
+                        </li>
+                        
+                        <li class="first">
+                            <!--이름영역-->
+                            <div class="menu_item">고객지원</div>
+                            
+                            <!--숨김메뉴-->
+                            <div class="item_contents">
+                                    <div class="contents_menu">일반 상담 및 문의</div>
+                                    <div class="contents_menu">소비자 보호</div>
+                                    <div class="contents_menu">로그인증서 안내</div>
+                                    <div class="contents_menu">이용안내</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+          
+</body>
+</html>

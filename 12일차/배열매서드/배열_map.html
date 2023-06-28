@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+         let arr=[2,4,6,8];
+       /*  let newArr = new Array(4);
+                                                    //          0      1      2    3
+         for( let i=0; i<arr.length ; i++){         //          4  ,  16  ,  36 , 64
+             newArr[i] = arr[i] * arr[i];
+         }
+         alert(newArr);
+        */        
+       let newArr = arr.map( function( value){
+            return  value *value;
+        });
+        alert( newArr);
+
+    
+      let newArr1 = arr.map( function(v, i){
+            return  v*i ;
+      });
+
+      alert( newArr1);   // [ 0,4,12,24];
+      let  newArr2 =  new Array(5).fill().map( function( v, i){
+             return i+1;
+      });
+
+      alert( newArr2) ;   // 1 2 3 4 5 
+
+    </script>
+</body>
+</html>

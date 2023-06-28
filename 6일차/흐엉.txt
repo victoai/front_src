@@ -1,0 +1,132 @@
+  <!--헤드라인(픽스)-->
+        <div class="header">
+            <!--로고-->
+            <div class="logo">
+                <img src="">
+            </div>
+            <!--메뉴 wrap-->
+            <ul class="menu_wrap">
+                <!--상위메뉴-->
+                <li class="menu_item">BODYCO</li>
+                <li class="menu_item">MUSE BOUTIQUE</li>
+                <li class="menu_item">ALL</li>
+                <li class="menu_item">BEST</li>
+                <li class="menu_item">보정
+                    <!--하위메뉴1-->
+                    <ul>
+                        <li>Lv.1</li>
+                        <li>Lv.2</li>
+                        <li>Lv.3</li>
+                    </ul>
+                </li>
+                <li class="menu_item">브라
+                    <!--하위메뉴2-->
+                    <ul>
+                        <li>심리스</li>
+                        <li>브라렛</li>
+                        <li>웨어</li>
+                    </ul>
+                </li>
+                <li class="menu_item">팬티
+                    <!--하위메뉴3-->
+                    <ul>
+                        <li>삼각</li>
+                        <li>사각</li>
+                        <li>거들</li>
+                    </ul>
+                </li>
+                <li class="menu_item">세트
+                    <!--하위메뉴4-->
+                    <ul>
+                        <li>속옷</li>
+                        <li>멀티팩</li>
+                        <li>ACC</li>
+                    </ul>
+                </li>
+                <li class="menu_item">ACC</li>
+                <li class="menu_item">
+                    <img src="">
+                </li>
+            </ul>
+        </div>
+        <!--신상-->
+        <div class="new">
+            <h2>NEW</h2>
+            <p class="bar"></p>
+            <p class="ment">바디코의 새로운 프리미엄 보정웨어를 만나보세요.</div></p>
+        </div>
+        <!--신상 아이템-->
+        <div class="item_wrap">
+            <ul class="new_item">
+                <li class="list">
+                    <img src="">
+                    <p class="title">바디코 에어 스윙 SET(브라+팬티)</p>
+                    <p class="section">볼륨은 편안하게, 라인은 매끈하게</p>
+                    <p class="money">61,200원</p>
+                    <p class="sale">41,200원</p>
+                </li>
+                <li class="list">
+                    <img src="">
+                    <p class="title">바디코 에어 스윙 팬티</p>
+                    <p class="section">에어스윙브라 팬티 단품 메쉬소재로 시원한 착용감</p>
+                    <p class="money">18,300원</p>
+                    <p class="sale"> 12,900원</p>
+                </li>
+                <li class="list">
+                    <img src="">
+                    <p class="title">바디코 에어 스윙 브라</p>
+                    <p class="section">말림도,땀도,불편함도 없는 엑티브 최적화 이너웨어</p>
+                    <p class="money">42,800원</p>
+                    <p class="sale">29,900원</p>
+                </li>
+            </ul>
+        </div>
+        <!--베스트-->
+        <div class="best">
+            <h2>BEST</h2>
+            <p class="bar"></p>
+            <p class="ment">변함없이 사랑받는 바디코의 베스트셀러 아이템</div></p>
+        </div>
+        <!--베스트 아이템-->
+        <div class="item_wrap">
+            <ul class="best_item">
+                <li class="list">
+                    <img src="">
+                    <p class="title">바디코 애착 프리업 브라</p>
+                    <p class="section">매일 매일 입고 싶은 나만의 애착브라</p>
+                    <p class="money">42,300원</p>
+                    <p class="sale">29,800원</p>
+                </li>
+                <li class="list">
+                    <img src="">
+                    <p class="title">바디코 애착 보정팬티</p>
+                    <p class="section">복부 콤플렉스를 해결해 주는 데일리 애착 팬티</p>
+                    <p class="money">28,300원</p>
+                    <p class="sale">15,900원</p>
+                </li>
+                <li class="list">
+                    <img src="">
+                    <p class="title">바디코 애착 힙업 보정팬티</p>
+                    <p class="section">볼록한 아랫배와 처진 힙 고민해결</p>
+                    <p class="money">39,800원</p>
+                    <p class="sale">23,900원</p>
+                </li>
+            </ul>
+        </div>
+        <!--바닥글-->
+        <div class="footer">
+            <div class="footer1_sec1">
+                <p class="sec_1">c/s</p>
+                <p class="pn">02-6749-7000</p>
+                <p class="sec_3">월-금 AM 11:00 ~ PM 4:00<br>점심시간 PM 12:30 ~ PM 1:30<br>주말 및 공휴일 휴무</p>
+            </div>
+            <div class="footer1_sec2">
+                <p sec_1>COMPANY</p>
+                <p class="sec"> 상호 주식회사 오버컴퍼니 | 대표 이해인,박선우 | 사업자등록번호 464-86-01610<br>통신판매업 신고 2020-서울마포-2083 | (사업자정보확인)<br>전화 02-6749-7000 주소 서울특별시 마포구 어울마당로3길9-5(합정동)4층<br>교환/반품 주소 서울특별시 마포구 어울마당로3길9-5(합정동)4층<br>개인정보관리책임자 이해인(bodyco2020@gmail.com)/p>
+            </div>
+            <div class="footer1_sec3">
+                <p class="sec_1">BANK</p>
+                <p class="sec">우리은행 1005-303-942742</p>
+                <p class="sec">예금주 주식회사 오버컴퍼니</p>
+            </div>
+        </div>

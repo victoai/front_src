@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person1 = {
+            name: 'acorn'
+        };
+
+        let person2 = {
+            name: 'hong',
+            study: function() {
+                 alert( this.name + '공부해요');
+            }
+        };
+
+        person2.study(); //  
+        // call()
+        person2.study.call(person1); // 매서드호출할 때  실행할 객체 정보를 전달 할 수 있다.
+        
+        
+        var example = function ( a,b,c) {
+         return a+b+c;
+        };
+       let result1= example(1, 2, 3);
+       let result2 = example.call(null, 1, 2, 3);
+       let result3 = example.apply(null, [1, 2, 3]);
+      //  let result3 = example.apply(null, [1, 2, 3]);
+
+       
+       alert( result1 );
+       alert ( result2 );
+       alert ( result3 );
+    </script>
+    
+</body>
+</html>

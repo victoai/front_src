@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let 고양이= { 
+            name : "야옹이" ,
+            age: 2 ,
+            eys: {
+                망막: 1,
+                홍체:1 ,
+                see:function (){
+                    alert("눈을 통해 본다");
+                }
+            }
+            ,
+            mouth:{
+                eat : function(){
+                     alert(" 입을 통해 먹는다");
+                }
+            }
+            
+        };        
+
+        고양이.eys.see();
+        고양이.mouth.eat();
+
+    </script>
+    
+</body>
+</html>

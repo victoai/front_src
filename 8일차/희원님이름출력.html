@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/*
+          반복 ( 이름이 stop이 아닐동안)
+         - 이름을 입력받는다.
+         - 이름을 출력한다
+*/
+
+// 변수의 유효범위   블럭안에서 만든 변수는 그 블럭에서만 유효함
+
+
+/*
+let name= prompt("이름을 입력하세요(종료하려면 stop을 입력하세요)");
+while( name !="stop"){        
+    name= prompt("이름을 입력하세요(종료하려면 stop을 입력하세요)");
+    alert(name);
+}
+
+*/
+
+
+while(true){
+    let name= prompt("이름을 입력하세요(종료하려면 stop을 입력하세요)");  
+    if( name =="stop") break;
+    alert(name);
+}
+
+
+/*
+        while(true){
+            let name= prompt("이름을 입력하세요(종료하려면 stop을 입력하세요)");
+            if(name!="stop"){
+                 prompt( name+"님 다른 이름을 입력하세요(종료하려면 stop을 입력하세요)");
+            }
+            if(name=="stop"){
+                alert( "stop을 입력받아 종료합니다.")
+                break;
+            }
+        }
+
+*/
+    </script>
+</body>
+</html>

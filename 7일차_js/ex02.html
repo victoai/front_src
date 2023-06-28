@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function check(){
+            let  userId = document.getElementById("userId");
+             // alert( userId);
+             // alert( userId.value);            
+             console.log( "userid"  + userId);
+             console.log( "userid value " + userId.value);
+            if( userId.value == ""){
+                alert("아이디를 입력하세요");
+            }else{
+                alert("입력을 했군요");
+            }
+        }
+        
+    </script>
+</head>
+<body>    
+    <label>아이디</label>
+    <input type="text"  id="userId">
+    <button onclick="check()" >클릭</button>
+</body>
+</html>

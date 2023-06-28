@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .detail{
+            display: none;
+              height: 100px;             
+              background-color: aquamarine; 
+        }
+    </style>
+
+    <script>
+
+       
+        function detail(obj){
+         //   alert( obj);
+            let parent  =  obj.parentElement
+            let flag = parent.querySelector(".flag");
+            let detail =  parent.firstElementChild.nextElementSibling.nextElementSibling;  // 부모의 첫번째 자식의 다음자식 선택
+           // alert( detail);
+
+            if( flag.value=="1"){
+                detail.style.display="block";
+                detail.innerHTML="ddddd";
+                flag.value=0;
+            }else{
+                detail.style.display="none";           
+                flag.value=1;
+            }
+
+
+        
+
+        }
+    </script>
+</head>
+<body>
+    
+<div class="list">
+    <input type="hidden" class="flag" value="1">
+    <button onclick="detail(this)">상세</button>
+    <div  class="detail">
+        dfdfdfd
+    </div>
+</div>
+<div class="list">
+    <input type="hidden" class="flag" value="1">
+    <button onclick="detail(this)">상세</button>
+    <div  class="detail">
+        
+    </div>
+</div>
+
+<div class="list">
+    <input type="hidden" class="flag" value="1">
+    <button onclick="detail(this)">상세</button>
+    <div  class="detail">
+         
+    </div>
+</div>
+
+
+</body>
+</html>

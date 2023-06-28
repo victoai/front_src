@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let fruits = [ "딸기" , "사과", "배"] ;
+
+     // 배열의 요소를 하나의 문자열로 만들기
+     let str="";
+     for( let i=0; i< 2; i++){
+        str+= fruits[i] +",";
+     }     
+     str+= fruits[fruits.length-1];     
+     alert( str);
+
+
+      /*  
+     for( let i=0;  i<fruits.length;i++){    // i  배열의인데스 , 반복제어변수 
+         alert( fruits[i]);
+     }
+    */
+     fruits.forEach(  function(e,i){     // 요소의값 , 인덱스 
+           alert( e +":" + i);
+     });  // callback
+
+
+
+     let newfruits = fruits.map( function( e, i){     // 요소의 값, 인덱스   ,반드시  return 
+        return  e+"님";
+     } );
+
+     alert( newfruits);
+     //alert( newfruits.toString());   // 생략
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // 입력한 숫자의 팩토리얼 값을 구하는 코드를 만들어라
+    //  3!     => 1*  2* 3  
+    //  5!     => 1  *2 *3 * 4 * 5
+    //  10!    => 1 * 2* 3 * 4*  5*  6 * 7 * 8 * 9 * 10   => total
+    //            1   2  6   24  120
+    //입력 : x
+    //출력 : fac  
+    /* 반복
+        - 항을 구한다 
+        - 항을값을 누적한다( 곱해간다)
+
+       누적된값을 출력한다
+     */
+
+    let x;  // 입력한 숫자  
+    let fac=1;  //팩토리얼값 
+
+    x= parseInt(prompt("수를 입력하세요!"));
+    for( let i=1 ; i<=x ; i++ ){
+        fac= fac * i;
+        console.log(  i + " " + fac);
+    }
+    alert(x +"!  =" +  fac);
+/*
+
+    let x = parseInt(prompt("숫자를 입력하세요"));
+    let i;
+    let fac=1;
+    for(i=1; i<=x; i++){
+        fac = fac * i ;
+    }
+    alert(fac);
+
+    */
+    </script>
+
+</body>
+</html>

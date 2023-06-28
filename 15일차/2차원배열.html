@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        //배열은 변수를 여러개 가지는 것 
+        let arr1=  [  1,3,5,7];
+        let arr11= [ 2,4,6,8 ];
+        arr1.forEach(
+            function( e, i){
+               console.log(e);
+            }
+        );
+
+        console.log("=======================");
+        for(let i=0 ; i< arr1.length ; i ++){
+            console.log( arr1[i]);
+        }
+
+        for(let i=0 ; i< arr11.length ; i ++){
+            console.log( arr11[i]);
+        }
+
+
+        //2차원배열의 개념은 1차원배열을 여러개 가지는 것
+        //2차원배열은 행, 열정보 필요
+        // arr2[0][0]
+        // arr2[0][1]
+        let arr2 =  [   [1,3,5,7] , [2,4,6,8] ] ;  
+        for( let i=0; i< arr2.length; i++){  //행접근
+            //열 접근
+            for( let j=0; j< arr2[i].length ; j++ ){
+                 document.write(  arr2[i][j] + " ") ;
+            }
+            document.write("<br>");
+        }
+
+
+    </script>
+    
+</body>
+</html>

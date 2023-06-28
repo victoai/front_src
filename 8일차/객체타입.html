@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    
+        let name ="맛동산"
+        let price=3000;
+        let weight=300;
+
+        //구조화된 데이터  , 고객(아이디, 비번, 이메일, 주소) ,
+        //객체타입
+        let snack = {      // 객체속성 , 멤버변수   key value형태로 데이터 저장함 
+            name:"맛동산",  
+            price:3000,
+            weight:300
+        }
+
+        alert( snack.name);
+        alert( snack.price);
+        snack.name="새우깡";
+        alert( snack.name);        
+
+        let snacks  = [
+            {      
+                name:"맛동산",  
+                price:3000,
+                weight:300
+            },
+            {      
+                name:"빼빼로",  
+                price:1200,
+                weight:80
+            }
+        ] ;
+        
+         console.log ( snacks[0].name);
+         console.log ( snacks[0].price);
+         console.log ( snacks[0].weight);
+         console.log("===================")
+         console.log(  snacks[1].name);
+         console.log(  snacks[1].price);
+         console.log ( snacks[1].weight);
+    </script>
+
+</body>
+</html>

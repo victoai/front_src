@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function addList(){        
+
+            //태그 생성  li
+            let  ul  = document.querySelector("ul");
+            let li = document.createElement("li");
+            li.innerHTML="fun";
+            ul.appendChild(li);
+
+            // li  클릭시  hi 출력
+            // li 클릭시  삭제
+            li.addEventListener("click" , function(){              
+                let p =this.parentElement;
+                p.removeChild(li);
+                //this.parentElement.removeChild(this);
+            });
+        }
+    </script>
+</head>
+<body>
+    
+
+ 
+
+    <button  onclick="addList()">추가</button>
+    <ul>
+
+    </ul>
+</body>
+</html>

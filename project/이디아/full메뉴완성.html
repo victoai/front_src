@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        /* 글자폰트, 글자크기  */
+        body{            
+            line-height: 1.4em;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ccc;
+        }
+
+         
+        nav{
+            
+            border-bottom: 1px solid #ccc;
+            background-color: rgb(250, 248, 245);
+           
+            
+        }
+
+        nav .inner{
+            height: 200px;
+            width:1100px; 
+            margin: auto;
+            position: relative; 
+            
+        }
+
+        
+
+
+        /*  메인메뉴 자체가 가려지지 않도록  z-index 속성 */
+        nav .inner ul.main-menu  {
+            list-style: none;
+            display: flex;
+            position:absolute;
+            bottom: 0px;
+            right: 0px;
+            margin-bottom: 0px;
+            z-index: 1;
+        
+      }
+      
+     /*  item 안의  item__name영역의 패딩주기, 영역확보하기 */
+    
+      nav .inner ul.main-menu .item .item__name {
+        padding: 10px 20px 34px 20px;    /* 사각영역 확보하기*/           
+      }
+
+
+      /* 아이템에 마우스가 올려졌을 때 */
+      nav .inner ul.main-menu .item:hover .item__name  {
+        background-color: #000;
+      }
+
+      nav .inner ul.main-menu .item:hover .item__contents {
+        display: block;
+      }
+
+       /*  하위 메뉴 공간영역  전체*/
+      nav .inner ul.main-menu .item .item__contents {       
+        position: fixed;
+        left: 0px;
+        width:100%;
+        height: 300px;
+        display: none;   
+        
+       
+       
+      }
+       
+
+      /*  하위 메뉴 공간영역  하위영역 2개*/
+
+      .item__contents .contents-menu{
+        height: 90%;
+        background-color: #000;
+        padding: 20px;
+        font-size: 12px;
+        color:#ccc;
+        box-sizing: border-box;
+      }
+
+      .item__contents .contents-texture{
+        height: 10%;
+        background-color: rgb(222, 136, 136);
+        padding: 5px;
+        font-size: 12px;
+        color:#ccc;
+        box-sizing: border-box;
+         
+      }
+
+      .adv{
+        background-image: url(images/star.png);
+        background-position: center;
+        background-size: cover;
+        width:100%;
+        height: 500px;
+      }
+
+    
+      
+    </style>
+</head>
+<body>
+    <nav>
+       <div class="inner">
+        
+         <!-- main menu  -->       
+            <ul  class="main-menu">
+                <li  class="item"> 
+                    <div  class="item__name"> COFFEE </div>
+                    <div  class="item__contents"> 
+                        <div class="contents-menu">
+                           aaa
+                        </div>                      
+                    
+                        <div class="contents-texture">bbb</div>
+                    </div>
+                 </li>
+                 <li  class="item"> 
+                    <div  class="item__name"> COFFEE </div>
+                    <div  class="item__contents"> 
+                        <div class="contents-menu"></div>                      
+                    
+                        <div class="contents-texture"></div>
+                       
+                     </div>
+                 </li>
+                 <li  class="item"> 
+                    <div  class="item__name"> COFFEE </div>
+                    <div  class="item__contents"> 
+                        <div class="contents-menu"></div>                      
+                    
+                        <div class="contents-texture"></div>
+                     </div>
+                 </li>
+                 <li  class="item"> 
+                    <div  class="item__name"> COFFEE </div>
+                    <div  class="item__contents"> 
+                        <div class="contents-menu"></div>                      
+                    
+                        <div class="contents-texture"></div>
+                     </div>
+                 </li>
+                 
+            </ul> 
+           
+       </div>
+    </header>
+
+    <div class="adv">
+
+
+    </div>
+</body>
+</html>

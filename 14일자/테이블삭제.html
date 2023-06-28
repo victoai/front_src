@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function calPrice( obj){          
+          let qty  =(obj.value=="")?0:parseInt( obj.value);      
+          let unitTd = obj.parentElement.previousElementSibling;
+          let priceTd= obj.parentElement.nextElementSibling;
+          let unit = parseInt(unitTd.innerHTML);
+          let price = qty * unit;
+          priceTd.innerHTML=  price;            
+          //전체합계금액 다시 구하기
+          totalPrice();
+        }
+        //전체합계금액 구하기
+        function totalPrice(){
+            let tbody = document.querySelector("#cart");
+            let trs = tbody.querySelectorAll("tr");
+            let sum=0;
+            
+            for(let i=0; i< trs.length ; i++){
+                let tr = trs[i];  // 각 tr 선택
+                let priceTd =tr.lastElementChild;
+                let price  = parseInt(priceTd.innerHTML);
+                sum += price;
+            } 
+        }
+        function deleteItem(){
+            let  cart = document.querySelector("#cart");
+            let  items  = document.querySelectorAll("input[type='checkbox']");           
+                   
+            for( let i=0 ; i< items.length ;i++){
+                let item = items[i];
+                if( item.checked){                    
+                    let tr = item.parentElement.parentElement;                
+                    cart.removeChild(tr);                     
+                }
+            }
+            //totalPrice();
+        }
+
+           //전체합계금액 구하기
+           function totalPrice(){
+            let tbody = document.querySelector("#cart");
+            let trs = tbody.querySelectorAll("tr");
+            let sum=0;
+            
+            for(let i=0; i< trs.length ; i++){
+                let tr = trs[i];  // 각 tr 선택
+                let priceTd =tr.lastElementChild;
+                let price  = parseInt(priceTd.innerHTML);
+                sum += price;
+            } 
+            let  order_price  =document.querySelector("#order-price");
+            order_price.innerHTML= sum;
+        }
+    </script>
+</head>
+<body>
+    <table >   
+        <tbody  id="cart">
+            <tr>
+                <td><input type="checkbox">삭제</td>
+                <td>3000</td>
+                <td><input type="text" value="1"  onkeyup="calPrice(this)"></td>
+                <td>3000</td>
+            </tr>        
+            <tr>
+                <td><input type="checkbox">삭제</td>
+                <td>3000</td>
+                <td><input type="text" value="1" onkeyup="calPrice(this)"></td>
+                <td>3000</td>
+            </tr> 
+        </tbody>                  
+    </table>
+    <button onclick="deleteItem()">삭제</button><br>
+    합계<span  id="order-price">6000</span>    
+</body>
+</html>

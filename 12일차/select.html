@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setDomain(){             
+            let frm  = document.frm;            
+            let domain  =frm.domain;       
+            // 선택한 select태그의 option값 얻어오기
+            //alert(  domain.value) ; ///확인하기 , 크롬에서만 사용가능 
+            //  let selIndex  = domain.selectedIndex ; 
+            // let domainText  = domain.options[selIndex].text 
+            // 위의 2줄을 한줄로
+            let domainText  =  domain.options[domain.selectedIndex].text;          
+            let domainValue  = domain.options[domain.selectedIndex].value;
+            //alert( "text=" + domainText);
+            //alert( "value=" + domainValue);              
+            let emailDomain = frm.emailDomain;
+            emailDomain.value = domainText;
+        }
+    </script>
+</head>
+<body>    
+    <form  name="frm">
+    <input type="text" name="emailDomain">
+    <select onchange="setDomain()"  name="domain">
+        <option value="">선택하세요</option>
+        <option value="01">google.com</option>
+        <option value="02">naver.com</option>
+    </select>
+    
+    </form>
+</body>
+</html>

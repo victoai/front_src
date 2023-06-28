@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            width: 400px;;
+            height: 400px;
+            border: 1px solid black;
+            margin: 0 auto;
+            background-image: url("media/Penguins.png");
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            position: relative;
+        }
+        .left_btn{
+            width: 150px;
+            height: 400px;
+            position: absolute;
+            left: 0px;
+        }
+        
+    
+        .right_btn{
+            width: 150px;
+            height: 400px;
+            position: absolute;
+            right: 0px;
+        }
+    </style>
+    <script>
+        let imgNames = ["media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png",
+        ];
+        let cnt=0
+        function nextImg(){
+            
+            console.log(cnt);       // 0은 중간, 시작이라는 이미지//  0~7
+            cnt++;           
+            console.log(cnt);                    
+            cnt %= imgNames.length;
+            console.log(cnt+"출력"); 
+
+            let gallery = document.querySelector(".gallery");
+            let url_1 = imgNames[cnt];
+            let url_2 = "url(" + url_1 + ")" 
+            gallery.style.backgroundImage = `url('${imgNames[cnt]}')`;
+        }
+        
+        function previousImg(){
+            console.log(cnt);
+            cnt--;
+            console.log(cnt);
+            if(cnt<0)cnt += imgNames.length; // -8 -7 -6 -5 -4 -3 -2 -1 // 0 1 2 3 4 5 6 7 
+            console.log(cnt);
+            cnt %= imgNames.length;
+            console.log(cnt+"출력");
+            let gallery = document.querySelector(".gallery");
+            let url_1 = imgNames[cnt];
+            let url_2 = "url(" + url_1 + ")" 
+            gallery.style.backgroundImage = `url('${imgNames[cnt]}')`;
+        }
+    </script>
+</head>
+<body>
+    <div class="gallery">
+        <div class="left_btn" onclick="previousImg()"></div>
+        <div class="right_btn" onclick="nextImg()"></div>
+    </div>
+    <div>
+        사진의 좌우에 버튼이 숨겨져 있음
+    </div>
+</body>
+</html>

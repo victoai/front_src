@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .book_wrap{
+            width: 600px;
+            margin: 0 auto;
+            position: relative;
+            background-color: blue;
+            display: flex;
+
+        }
+        ul, li{
+            padding: 0px;
+            list-style: none;
+
+        }
+        
+        .book{
+            text-align: center;
+            height: 50px;
+            width: 100px;
+            line-height: 50px;
+            border: 1px solid black;
+        }
+        .book > ul{
+            display:none;
+            
+        }
+        .book:hover ul{
+            display:flex;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 600px;
+            height: 500px;
+            border: 1px solid black;
+            
+            
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <ul class="book_wrap">
+        <li class="book">book_1
+            <ul>
+                <li>book_1 내용</li>
+            </ul>
+        </li>
+        <li class="book">book_2
+            <ul>
+                <li>book_2 내용</li>
+            </ul>
+        </li>
+        <li class="book">book_3
+            <ul>
+                <li>book_3 내용</li>
+            </ul>
+        </li>
+        <li class="book">book_4
+            <ul>
+                <li>book_4 내용</li>
+            </ul>
+        </li>
+        <li class="book">book_5
+            <ul>
+                <li>book_5 내용</li>
+            </ul>
+        </li>
+        <li class="book">book_6
+            <ul>
+                <li>book_6 내용</li>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+</html>

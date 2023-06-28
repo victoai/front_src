@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            width: 480px;
+            height: 700px;
+            border: 1px solid black;
+            margin: 0 auto;
+            padding-right: 40px;
+            position: relative;
+        }
+        .slides{
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+            margin: 0 auto;
+        }
+       
+        .left_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgb(189, 214, 253);
+            border: 2px solid rgb(66, 91, 254);
+            color: rgb(66, 91, 254);
+            position: absolute;
+            left: 10px;
+            top: 350px;
+        }
+        .right_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgb(189, 214, 253);
+            border: 2px solid rgb(66, 91, 254);
+            color: rgb(66, 91, 254);
+            position: absolute;
+            right: 10px;
+            top: 350px;
+        }
+        img{
+            margin-top: 40px;
+            margin-bottom: 25px;
+            width: 400px;
+            height: 500px;
+        }
+    </style>
+
+    <script>
+        let next=0;
+        let prev=0;
+        let imgNames=["media/이상한변호사우영우.jpg" , "media/우영우.jpg", "media/정명석.jpg",
+    "media/최수연.jpg", "media/권민우.jpg","media/동그라미.jpg","media/태수미.jpg","media/우광호.jpg"];
+        let titles=["이상한 변호사 우영우 등장인물", "우영우", "이준호","정명석","최수연","권민우","동그라미","태수미","우광호"];
+        let contents=["등장인물 소개", "주인공","남주인공","서브아빠","봄날의 햇살","권모술수","동 to the 그 to the 라미","우영우 엄마","우영우 아빠"];
+
+        // 사진 다음으로 넘거가기
+        function nextImg(){
+            let gallery = document.querySelector(".slides li img");         // 이미지
+            let title= document.querySelector(".slides li h3");             // 제목
+            let content= document.querySelector(".slides li p");
+            next++;
+            next = next % imgNames.length;          // 0 1 2 
+            gallery.src=imgNames[next];
+            title.innerHTML=titles[next];
+            content.innerHTML=contents[next];
+        }
+
+        function prevImg(){
+            let gallery=document.querySelector(".slides li img");
+            let title=document.querySelector(".slides li h3");
+            let content=document.querySelector(".slides li p");
+            prev--;
+            prev= prev % imgNames.length;
+            gallery.src=imgNames[prev];
+            title.innerHTML=titles[prev];
+            content.innerHTML=contents[prev];
+        }
+    </script>
+</head>
+<body>
+    <!--등장인물 전체영역-->
+    <div class="gallery">
+        <!--슬라이드 영역-->
+        <ul class="slides">
+            <li><img src="./media/이상한변호사우영우.jpg"></li>
+            <li><h3>이상한 변호사 우영우 등장인물</h3></li>
+            <li><p>등장인물 소개</p></li>
+        </ul>
+        <ul class="slides">
+            <li><img src="./media/우영우.jpg"></li>
+            <li><h3>우영우</h3></li>
+            <li><p>주인공</p></li>
+        </ul>
+        <ul class="slides">
+            <li><img src="./media/이준호.jpg"></li>
+            <li><h3>이준호</h3></li>
+            <li><p>남주인공</p></li>
+        </ul>
+        <ul class="slides">
+            <li><img src="./media/정명석.jpg"></li>
+            <li><h3>정명석</h3></li>
+            <li><p>서브아빠</p></li>
+        </ul>
+        <ul class="slides">
+            <li><img src="./media/최수연.JPG"></li>
+            <li><h3>최수연</h3></li>
+            <li><p>봄날의 햇살</p></li>
+        </ul>
+        <ul class="slides">
+            <li><img src="./media/권민우.jpg"></li>
+            <li><h3>권민우</h3></li>
+            <li><p>권모술수</p></li>
+        </ul>
+        <ul class="slides">
+            <li><img src="./media/동그라미.jpg"></li>
+            <li><h3>동그라미</h3></li>
+            <li><p>동 to the 그 to the 라미</p></li>
+        </ul>
+        <ul class="slides">
+            <li><img src="./media/태수미.jpg"></li>
+            <li><h3>태수미</h3></li>
+            <li><p>우영우 엄마</p></li>
+        </ul>
+        <ul class="slides">
+            <li><img src="./media/우광호.jpg"></li>
+            <li><h3>우광호</h3></li>
+            <li><p>우영우 아빠</p></li>
+        </ul>
+
+        <!--버튼영역-->
+        <button class="left_btn" onclick="prevImg()"><</button>
+        <button class="right_btn" onclick="nextImg()">></button>
+    </div>
+</body>
+</html>

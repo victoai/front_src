@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            display: flex;
+          
+        }
+
+        .search{
+             height: 34px;           
+             position: relative;
+             
+        }
+        .search  input{
+            width: 50px;
+            height: 34px;
+            transition: width .4s;
+            border:2px solid black;
+            outline: none;
+            border-radius: 5px;
+
+        }
+        .search  input:focus{
+            width: 200px;
+            height: 34px;
+            border-color: green;      
+
+        }
+        .search img{
+            position:absolute;
+            right: 5px;
+            width: 40px;
+            height: 30px;
+            position: absolute;
+            top:0px;
+            bottom:0px;
+            margin: auto;
+        }
+        header ul{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#" >sign in</a></li>
+            <li><a href="#" >sign in</a></li>
+            <li><a href="#" >sign in</a></li>
+            <li><a href="#" >sign in</a></li>
+            <li><a href="#" >sign in</a></li>
+        </ul>
+       <div class="search">
+            <input type="text">
+            <img src="images/search.png" alt="">
+        </div> 
+    </header>
+    
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        ul{
+            list-style: none;
+        }
+
+        /* 바깥쪽 크기  지정*/
+        .outer_wrap{
+            width:1200px;
+            height: 500px;
+            background-color: red;
+            margin: 0 auto;
+        }
+
+        /* article 영역 이미지 크기*/
+
+        article img{
+            width:200px;
+            height: 200px;
+        }
+
+       /* article 영역의 이미지 옆으로...*/
+        article .movie_poster ul{
+            display: flex;
+        }
+        /*  asie 영역 이미지 크기*/
+        aside img{
+            width: 200px;
+            height: 200px;
+        }
+
+        /*  asie 영역 이미지  정렬*/       
+        aside  .event_box_inbox{
+            text-align: center;
+        }
+
+
+        /*바닥글 하위영역 옆으로 */
+        footer{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="outer_wrap">
+        <div class="wrap">
+            <header>
+                <div class="title"><h1><mark>시 네 마 천 국</mark></h1></div>
+            </header>
+            <nav>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#"><b>Home</b></a></li>
+                        <li><a href="#"><b>상영영화</b></a></li>
+                        <li><a href="#"><b>상영시간표</b></a></li>
+                        <li><a href="#"><b>예매</b></a></li>
+                        <li><a href="http://127.0.0.1:5500/6%EC%9D%BC%EC%B0%A8/%EC%8B%9C%EB%84%A4%EB%A7%88%EC%B2%9C%EA%B5%AD_%EB%A1%9C%EA%B7%B8%EC%9D%B8.html"><b>로그인</b></a></li>
+                        <li><a href="#"><b>회원가입</b></a></li>
+                    </ul>
+                </div>
+            </nav>
+        
+            <article>
+                <fieldset class="movie_poster">
+                    <legend align="center"><h2>[최신 상영작]</h2></legend>
+                    <nobr>
+                    <ul>
+                        <li class="movie_pst_inbox">
+                            <img class="movie" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA2MjFfMTI1%2FMDAxNjU1ODEwNzEyOTIx.6ADxd0FmKUe4mcNAnhWNuLaIvLB9pP21DjcA_bZrGUMg.9Cm9JUqeFhQRBNRQxVLth1IrcQHSjt78yLuNchuEBF4g.JPEG.6060789%2FIMG_1652.JPG&type=sc960_832"> 
+                            <p>영화이름</p>
+                        </li>
+        
+                        <li class="movie_pst_inbox">
+                            <img class="movie" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MzFfMjEx%2FMDAxNjUzOTk5Mjk0MjYx.qxBVyKtq-RGI46XfcQgOA4VUJjJcUZOjv7L5f2IepmMg.NOOdTUCSNlVWaRKBnFPsHyd1rca9S_UrabP35SQWoc0g.JPEG.6060789%2FIMG_8775.JPG&type=sc960_832"> 
+                        </li>
+        
+                        <li class="movie_pst_inbox">
+                            <img class="movie" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F112%2F2022%2F05%2F30%2F202205301537374201532_20220530154235_01_20220530154401766.jpg&type=sc960_832">
+                        </li>
+        
+                        <li class="movie_pst_inbox">
+                            <img class="movie" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MzBfMTc5%2FMDAxNjU5MTgwODEzMjMy.tsdVEwRnArKxUyXLZJfsnt8Efq9luFhQoCunZQYCeRog.qpCcAtoDYzR_Az3bus6sKrPxvGoWBYdrCG_6PV_6SdQg.JPEG.wmwll1236%2Fcommon_%252839%2529.jpg&type=sc960_832">
+                        </li>
+        
+                        <li class="movie_pst_inbox">    
+                            <img class="movie" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA2MDNfNDIg%2FMDAxNjU0MjUzNTQ5MzYz.JQUyM7gBJ3NpGrupVEpj1UthYUw8xpA0GUhsvEnPHZIg.bkJEtigs5vdIksIOj1mY8RDtOq5dE8vR1Xj7stZRMpMg.JPEG.6060789%2FIMG_9176.JPG&type=sc960_832">
+                        </li>
+                    </ul>
+                    </nobr>
+                </fieldset>
+            </article>
+            
+            <aside>
+            <fieldset class="event_box">
+                <legend align="center"><h2>[이벤트]</h2></legend>
+                <nobr>
+                <div class="event_box_inbox">
+                    <img class="event" alt="회원 포인트 추가 적립 이벤트" src="https://file.miricanvas.com/template_thumb/2021/07/02/14/30/kmk0qqt7k1cj1gdv/thumb.jpg">
+                    <img class="event" alt="VIP 온라인 이벤트" src="https://t1.kakaocdn.net/kakaopay_bizplatform_admin/1592983736292">
+                    <img class="event" alt="통신사 멤버십 혜택 이벤트" src="https://t1.daumcdn.net/cfile/tistory/996E53415B878E7B12">
+                    <img class="event" alt="통신사 멤버십 혜택 이벤트" src="https://t1.daumcdn.net/cfile/tistory/99B879455C9C75AC17">
+                </div>
+                </nobr>
+            </fieldset>
+            </aside>
+        
+
+            <footer>
+                <div class="footer_item">
+                    <img alt="시네마천국" src="https://cdn-icons-png.flaticon.com/512/4221/4221419.png" width="100" height="100">
+                </div>
+                <div class="footer_item2">
+                    서울특별시 마포구 양화로 122 LAB7 빌딩 3층, 4층 | 고객센터 02-1234-5678 | 대표 임지수
+                </div>
+            </footer>
+        </div>    
+    </div>
+</body>
+</html>

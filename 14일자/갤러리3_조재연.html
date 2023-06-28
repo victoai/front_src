@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .back{
+            background-color: black;
+            width:500px;
+            height:400px;
+            position: relative;
+        }
+        #gallery{
+            width: 400px;
+            height: 300px;
+            border: 20px ridge gold;
+            background-color: aquamarine;
+            background-image: url("media/Jellyfish.png");
+            position: absolute;
+            top:20px;
+            left:30px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .left_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            background-color: red;
+            position: absolute;
+            left:10px;
+            top:130px;
+        }
+        .right_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            background-color: blue;
+            position: absolute; /* top right left bottom => position 변경해야함 */
+            right:10px;
+            top:130px;
+        }
+    </style>
+    <script>
+        let img=["media/Jellyfish.png",
+            "media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/banana.png",
+             "media/Koala.png",
+             "media/Tulips.png"]
+
+        let index=0            
+        function change1(){
+            let back=document.getElementById("gallery");
+            index--
+            if (index < 0) {index=img.length-1};
+            back.style.backgroundImage = "url('"+img[index]+"')";
+            index  = index % img.length;
+        }
+        function change2(){
+            let go=document.getElementById("gallery");
+            index++;
+            if (index >=img.length) {index=0}
+            go.style.backgroundImage = "url('"+img[index]+"')";
+            //=`url('${imgNames[next]}')`;
+            index = index  % img.length;
+        }
+    </script>
+</head>
+<body>
+    <div class="back">
+    <div id="gallery">
+        <div class="left_btn" onclick="change1()"></div>
+        <div class="right_btn" onclick="change2()"></div>
+    </div>
+    </div>
+</body>
+</html>

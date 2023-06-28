@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        //ex)
+        //요소 내용 변경
+        let a = document.getElementById("b");
+        a.innerHTML="(바뀔내용)";
+        a.innerText="(바뀔내용)";
+        // element.innerText = "<div style='color:red'>A</div>"; 이대로 출력
+        // element.innerHTML = "<div style='color:red'>A</div>"; 빨간 A 출력
+
+
+        //ex)
+        //요소 생성 / 노드 추가
+        let a = document.getElementById("b");
+        let c = document.createElement("li");
+        c.innerHTML="(바뀔내용)";
+        a.appendChild(c);
+
+
+
+        //ex)
+        //calsslist.add
+        <style>
+        .d{
+            width : 100px;
+            }
+        </style>
+        function add(){    
+            let a = document.getElementById("b");
+            a.classList.add("d");
+        }
+
+
+
+        //ex)
+        //요소 내용 확인
+        let a = document.getElementById("b");
+        let a = document.getElementById("b").value
+        console.log(a.value);
+        console.log(a);
+
+        if (a.value == ""){}
+        if (a == ""){}
+        
+
+
+
+        //ex)
+        //css 변경
+        let a = document.getElementById("b");
+        a.style.backgroundImage ="url('"+ imgNames[i] +"')";
+        a.style.color="green";
+        a.style.fontSize="30px";
+        a.style.display="block";
+        a.style.width="1000px";
+        a.style.height="50px";
+        a.style.border="3px dotted balck";
+        a.style.margin="20px";
+
+
+
+
+        //ex)
+        //객체나 요소의 메소드에 이벤트 리스너를 전달하는 방법 / 여러개의 리스너
+        //대상객체.addEventListener(이벤트명, 실행할이벤트리스너, 이벤트전파방식)
+        let a = document.getElementById("b");
+        a.addEventListener("moseover" , over);
+        function over(){};
+        a.addEventListener("click", function(){});
+
+        
+        window.addEventListener()
+
+
+
+
+        //queryselector
+        let a = document.querySelector('#b');
+        let c = a.querySelectorAll("tr");
+
+        //ex) document.getElementById   /   document.querySelector
+        // 둘 다 배열과 같이 각 항목을 접근하기 위한 인덱스를 제공한다고 한다.
+        
+        // getElementsByClassName은 HTMLCollection에 리턴
+        // querySelectorAll은 NodeList에 리턴
+
+        // HTMLCollection의 항목은 name, id 속성으로도 접근이 가능하지만,
+        // NodeList의 항목은 인덱스 번호로만 접근이 가능하다.
+
+        // 속도 getElementBy가 좀 더 빠름 (엄청나게 차이가 나지는 않음)
+        // 선택자의 선택범위 (id,class,name...)
+        // 성능은 getElementBy / 편리성 querySelectorAll
+    </script>
+</head>
+
+<body>
+
+    DOM (Documnent Object Mdoel)
+    문서 객체 모델
+    HTML 문서에 접근하기 위한 인터페이스(상호 간의소통을 위해 만들어진 매개체, 프로토콜)
+
+
+    요소 or 속성에 대하여 추가,제거,변경
+    css 변경
+    이벤트 추가
+
+
+    Document 메소드
+
+
+
+    1) HTML 요소의 선택
+    document.getElementsByTagName(태그이름) :     해당 태그 이름의 요소를 모두 선택함.
+    document.getElementById(아이디) :             해당 아이디의 요소를 선택함.
+    document.getElementsByClassName(클래스이름) : 해당 클래스에 속한 요소를 모두 선택함.
+    document.getElementsByName(name속성값) :      해당 name 속성값을 가지는 요소를 모두 선택함.
+    
+    document.querySelectorAll(선택자) :           해당 선택자로 선택되는 요소를 모두 선택함.
+    
+    
+
+
+
+    2) HTML 요소의 생성
+    document.createElement(HTML요소) :             지정된 HTML 요소를 생성함.
+    document.write(텍스트) :                       HTML 출력 스트림을 통해 텍스트를 출력함.
+
+    
+
+
+    3) HTML 이벤트 핸들러 추가
+    addEventListener()
+
+
+
+    4) HTML 객체의 선택
+
+
+
+
+
+
+</body>
+
+</html>

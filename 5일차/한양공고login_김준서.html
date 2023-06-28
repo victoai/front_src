@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            height: 100px;
+        }
+
+        header .search{
+            display: flex;
+            border: 1px solid black;
+            width: 250px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        header .search input{
+            border: none;
+            outline: 0;
+            width: 250px;
+            height: 30px;
+            padding: 10px;
+        }
+        header .search img{
+            width: 50px;
+            height: 50px;
+        }
+        nav {
+            width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            letter-spacing: 1px;
+            background-color: rgb(219, 230, 240);
+            height: 30px;
+            line-height: 30px;
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+            margin-left: 20px;
+        }
+        section{
+            width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            height: 600px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+
+        }
+        section .login_img{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAyMjdfMjc0%2FMDAxNTUxMjA0MjcyOTY3.e6X5_g9S5E4LOmEV07yhEbi6BbJeK1p_c-De1zWIvPEg.FPTygXbcE3mYonLxbS9_Ly37HPW7djFOR6fe5Uv1GPcg.PNG.hirit808%2F20190224_143335_781.png&type=sc960_832);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+        }
+        section .login{
+            margin: 0 auto;
+            width: 500px;
+            padding: 20px;
+        }
+        section .login input{
+            width: 97%;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        section .login button{
+            width: 100%;
+            height: 60px;
+            background-color: lightgray;
+            border: none;
+            border-radius: 5px;
+        }
+        footer{
+            
+            width: 1400px;
+            margin: 0 auto;
+            margin-top: -40px;
+            padding: 20px;
+            display: flex;
+            background-color: rgb(219, 230, 240);
+        }
+        footer .footer_img{
+            width: 30%;
+        }
+        footer .footer_info {
+            display: flex;
+            width: 70%;
+        }
+        footer .footer_info .info1{
+            margin-right: 120px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="heder_logo">
+            <img src="https://hanyang.sen.hs.kr/dggb/module/file/selectImageView.do?atchFileId=102456&fileSn=0" alt="">
+        </div>
+
+        <div class="search">
+            <input type="text">
+            <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fmagnifying-glass-icon-vector-magnifier-or-loupe-sign-vector-icon-vector-id1171358339%3Fk%3D20%26m%3D1171358339%26s%3D170667a%26w%3D0%26h%3DmG9OS7O053ewX6VL6KDvvNpsTodjhcjYbkcBuD6I5eg%3D&type=ff332_332" alt="">
+        </div>
+    </header>
+
+    <nav>
+        <span><a href="#">로그인</a></span>
+        <span><a href="#">회원가입</a></span>
+        <span><a href="#">홈으로</a></span>
+    </nav>
+
+    <section>
+        <div class="login_img">
+        </div>
+
+        <div class="login">
+            <input type="text" placeholder="아이디">
+            <input type="password" placeholder="비번">
+            <button>로그인</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_img">
+            <img src="https://hanyang.sen.hs.kr/dggb/module/file/selectImageView.do?atchFileId=102456&fileSn=0" alt="">
+        </div>
+        
+        <div class="footer_info">
+            <div class="info1">
+                <span>[04566]서울 중구 을지로 299(신당동, 한양공업고등학교)<br>
+                서울 중구 신당동 224-2
+                </span>
+            </div>
+            <div class="info2">
+                <span>교육청웹호스팅학교홈페이지<br>민간 SSL 보안인증사이트</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  
+      *{
+         padding: 0px;
+         margin: 0px;
+      }
+      ul{
+        list-style: none;
+      }
+
+
+      /* 상위메뉴가 옆으로 나올 수 있도록 display:flex*/
+      .menu_wrap{
+        list-style: none;
+        display: flex;
+      }
+
+      /* 하위메뉴 숨김 */
+      .menu_item  ul {
+        display: none;
+      }
+
+      /*상위메뉴가hover 됐을 때 */
+      .menu_item:hover  ul {
+        display: block;   /* 보임 */
+        width:100px;      /* 하위메뉴 너비  */   
+        background-color: blueviolet;  /* 하위메뉴 배경색 */
+        text-align: center;   /*  내용가운데*/
+        padding: 10px;    /* 하위메뉴 안쪽 여백 */
+      }
+             
+       /* 상위메뉴의 너비및 여백조정 */
+      .menu_item{
+        width:100px;
+        margin: 0px 30px;
+      }
+     
+    </style>
+</head>
+<body>
+    <ul class="menu_wrap">
+        <li  class="menu_item">메뉴1
+            <!-- 숨김 하위메뉴-->
+            <ul>
+                <li>하위1</li>
+                <li>하위1</li>
+                <li>하위1</li>
+            </ul>
+        </li>
+        <li  class="menu_item">메뉴2
+               <!-- 숨김 하위메뉴-->
+            <ul>
+                <li>하위2</li>
+                <li>하위2</li>
+                <li>하위2</li>
+            </ul>
+        </li>
+        <li  class="menu_item">메뉴3
+               <!-- 숨김 하위메뉴-->
+            <ul>
+                <li>하위3</li>
+                <li>하위3</li>
+                <li>하위3</li>
+            </ul>
+
+        </li>
+    </ul>
+
+</body>
+</html>

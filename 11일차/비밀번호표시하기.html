@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        let flag=1;
+        function toggle(){
+            let pw = document.getElementById("pw");
+            let toggle= document.getElementById("toggle");
+
+            if(flag){
+              pw.type="text";
+              toggle.innerHTML="감추기"
+              flag=0;
+            }else{
+                pw.type="password";
+                flag=1;
+                toggle.innerHTML="보이기";
+            }
+        }
+     
+    </script>
+</head>
+<body>    
+ <input  id="pw" type="password" > <button  onclick="toggle()" id="toggle">보이기</button>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header {
+            height: 300px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        .inner{
+
+            width: 1000px;
+            height: 200px;
+            background-color: aqua;
+            position: absolute;
+            top:0px;
+            bottom: 0px;
+            left:0px;
+            right:0px;
+            margin: auto;
+        }
+
+        header .badges{
+            position:absolute;
+            top:310px;
+            right: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            z-index: 1px;
+
+        }
+
+        .visual{
+            text-align: right;
+            height: 300px;
+            
+            background-image: url("images/star.png");
+        }
+    </style>
+</head>
+<body>
+   <header> 
+    <div class="inner"></div>
+    <div class="badges">
+
+        <img src="images/bages1.jpg">
+        <img src="images/bages2.jpg">
+    </div>
+   </header> 
+   <div class="visual">
+
+   
+   </div>
+</body>
+</html>

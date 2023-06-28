@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function init(){
+            alert("문서로드 완료");
+            alert("이제 dom를 맘대로 접근하세요 !!")
+
+            let btn  = document.getElementById("btn");
+            //btn.addEventListener("click" ,  info);
+
+            btn.addEventListener("click" ,  function(){
+                    alert("hello 익명");
+            });
+
+            //btn.addEventListener("click" , function() {}  );
+
+        }
+        function info(){
+            alert("hello");
+        }
+    </script>
+</head>
+
+<!--<body  onload="alert('문서로드 완료')">     -->
+ <body  onload="init()">       
+    <button id="btn">클릭</button> 
+</body>
+</html>

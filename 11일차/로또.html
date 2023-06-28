@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .ball{
+            width:50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: aqua;    
+            text-align: center;        
+            line-height: 50px;
+        }
+    </style>
+    
+    <script>    
+
+    function createLotto(){
+            // 배열생성45 배열요소 0를 채운다, 배열의 요소번째의값을 index+1의 값으로 변경
+         //0 1  2 3 4 5 6 7 8  9    => 원본배열
+        // 1 2  3 4 5 6 7 8 9 10
+        //newArray
+        // 0 1 2 3  4
+        // 6,2,1,10,3     
+
+        let arr=  new Array(45).fill(0).map((v,i) => i+1 );   // 후보
+       // alert(arr );
+        let shuffle= [];
+      
+        //let random  = Math.floor( Math.random() * arr.length );    //  0~44 배열의 인덱스        
+        while( arr.length>0) {    // 없을때까지 
+            let random = Math.floor( Math.random() * arr.length );  //45 ->0~44의 수가 나옴  (배열의 index)
+            arr.pop(random ) ;    //  후보배열에서 꺼내기 , 배열이 줄어듬 
+            shuffle.push(random);    //새로운혼합배열에 추가하기 
+        }  
+        //alert(shuffle);
+        //앞에서 6개 출력
+        for( let i=0; i<6; i++){
+           // alert(shuffle[i]);
+        } 
+        let ball = document.createElement("div");
+        ball.innerHTML=shuffle[0];
+        ball.classList.add("ball");
+
+        let parent= document.getElementById("body");
+        parent.appendChild(ball);        
+    }
+        
+
+    </script>
+</head>
+
+
+<body  id="body">
+<button  onclick="createLotto()"> 로또 생성</button>    
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+<script >
+ window.addEventListener("load", function(){
+
+    let fade_ins  = document.querySelectorAll(".fade_in");         
+    fade_ins.forEach( ( fade_in, index)=>{        
+         setTimeout(()=>{ 
+            fade_in.style.opacity=1;
+         }, (index+1) *700);
+    }) ;     
+     
+  
+    });
+     
+    
+   </script>
+
+   <style>
+
+    .visual
+    {
+        position: relative;
+    }
+
+    .fade_in{
+        opacity: 0;
+        transition: 1s;
+    }
+   </style>
+</head>
+<body>
+    
+
+   <div class="visual">
+
+
+    <div class="fade_in aa"   >
+        <img src="images/bages1.jpg">
+    </div> 
+
+    <div class="fade_in bb">
+        <img src="images/bages1.jpg">
+    </div> 
+
+
+    <div class="fade_in cc">
+        <img src="images/bages1.jpg">
+    </div> 
+   
+   </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리3</title>
+
+    <style>
+        .gallery{
+
+            width: 300px;
+            height: 300px;
+            /* border: 20px ridge wheat; */
+            border: 1px solid black;
+            /* background-color: aquamarine; */
+            background-image: url("media/Penguins.png");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .left_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(239, 250, 250, 0);
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            font-weight: 900;
+            font-size: 18px;    
+            position: absolute;
+            left: 1px;
+            top: 130px;
+            cursor: pointer;
+        }
+        
+        .right_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(239, 250, 250, 0);
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            font-weight: 900;
+            font-size: 18px;        
+            position: absolute;
+            top: 130px;
+            right: 1px;
+            cursor: pointer;
+            
+        }
+    </style>
+        
+    <script>
+
+        let imgNames = ["media/Penguins.png", 
+            "media/Lighthouse.png",
+            "media/Chrysanthemum.png",
+            "media/Desert.png",
+            "media/Hydrangeas.png",
+            "media/Jellyfish.png",
+            "media/Koala.png",
+            "media/Tulips.png"
+        ];
+
+        let next = 0;
+        function nextImg(){
+            
+            next++;
+            next = next % imgNames.length;            
+            let gallery = document.querySelector("#gallery");
+            
+            
+            console.log("현재 번호 "+next);
+            
+            // js로 백그라운드이미지 넣기 두가지 방법
+            // gallery.style.backgroundImage =`url('${imgNames[next]}')`; 
+            gallery.style.backgroundImage ="url('"+ imgNames[next] +"')"; 
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";
+            
+        }
+
+        // let prev = 7;
+        function previousImg(){
+            next--;
+
+            if(next<0){
+                next = next + imgNames.length;
+            }
+
+            console.log("현재 번호 "+next);
+
+            let gallery = document.querySelector("#gallery");
+            gallery.style.backgroundImage=`url('${imgNames[next]}')`
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";
+            
+            next = next % imgNames.length;
+        }
+
+        // let url="url(imgaes/background2.jpg)";
+        // slide.style.backgroundImage= url;
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+    <div id="gallery" class="gallery">
+
+        <div class="left_btn" onclick="previousImg()"><</div>
+        <div class="right_btn" onclick="nextImg()">></div>
+
+    </div>
+    
+</body>
+</html>
